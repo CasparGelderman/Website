@@ -1,0 +1,126 @@
+ * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Eraser;
+}
+
+ header {
+    // background: orange;
+     color: white;
+     font-family: Eraser;
+     text-align: center;
+ }
+
+ body {
+     background-image: url("Blackboard.png");
+ }
+
+#mainnav a {
+    color: white;
+   // background: orange;
+    display: block;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.4s;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#mainnav a:hover {
+    //background: darkorange;
+    text-decoration: underline;
+    color: pink;
+}
+
+#mainnav ul {
+    list-style: none;
+    display: flex;
+}
+
+#mainnav li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+#mainnav li:hover .submenu > li {
+    display: block;
+    top: 0px;
+}
+
+.submenu li {
+    display: none;
+    position: absolute;
+    top: 0px;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+}
+
+@font-face {
+    font-family: Eraser;
+    src: url("KGTenThousandReasons.ttf");
+}
+
+
+/* bezoeker inlog pagina */
+main {
+    padding-top: 100px;
+    background: black;
+    opacity: 0.5;
+}
+
+main h2 {
+    text-align: center;
+    color: wheat
+}
+form {
+   
+margin: 0 auto;
+opacity: 0.9;
+width: 600px;
+padding-top: 40px;
+}
+
+input {
+    
+    width: 500px;
+    height: 50px;
+    background: wheat;
+    
+}
+
+
+
+
+
+
+/*
+
+@media only screen and (max-width: 400px) {
+    body {
+
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+
+    }
+}
+
+@media only screen and (min-width: 961px) {
+    body {
+
+    }
+}
+
+*/

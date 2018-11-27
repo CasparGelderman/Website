@@ -33,7 +33,7 @@
 
  body {
      background-image: url("Blackboard.png");
- }
+    }
 
  article {
      display: flex;
@@ -42,9 +42,14 @@
      flex-flow: row wrap;
  }
 
+ .videos {
+
+ }
+
  iframe {
-    width: 420px; 
-    height: 315px;
+    margin: 2em;
+    width: 420px;
+    height: 315px; 
  }
 
 #mainnav a {
@@ -103,13 +108,11 @@
 /* footer */
 footer {
     bottom: 0;
-    position: static; 
     width: 100%;
     color: wheat; 
     background-color: rgba(0,0,0, 0.4);
     text-align: center;
     font-size: 11px;
- 
 }
 
 /* Inlogscherm en registerscherm */

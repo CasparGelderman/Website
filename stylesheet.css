@@ -73,10 +73,17 @@
 
 /* bezoeker inlog pagina */
 form {
-width: 400px;
-margin: 0 auto;
-background: black; 
+margin: 0 auto; 
 opacity: 0.9;
+width: 600px;
+padding-top: auto;
+}
+
+input {
+    margin: 0px auto;
+    width: 500px;
+    height: 50px;
+    background: red;
 }
 
 

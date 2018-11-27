@@ -2,17 +2,23 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Verdana;
+    font-family: Eraser;
 }
 
  header {
-     background: orange;
+    // background: orange;
      color: white;
+     font-family: Eraser;
+     text-align: center;
+ }
+
+ body {
+     background-image: url("Blackboard.png");
  }
 
 #mainnav a {
     color: white;
-    background: orange;
+   // background: orange;
     display: block;
     height: 64px;
     display: flex;
@@ -25,7 +31,9 @@
 }
 
 #mainnav a:hover {
-    background: darkorange;
+    //background: darkorange;
+    text-decoration: underline;
+    color: pink;
 }
 
 #mainnav ul {
@@ -55,6 +63,11 @@
     flex-direction: column;
     position: absolute;
     width: 100%;
+}
+
+@font-face {
+    font-family: Eraser;
+    src: url("KGTenThousandReasons.ttf");
 }
 
 /*

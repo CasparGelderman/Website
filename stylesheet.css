@@ -73,10 +73,10 @@
 
 /* bezoeker inlog pagina */
 form {
-margin: 0 auto; 
+margin: 10px auto; 
 opacity: 0.9;
 width: 600px;
-padding-top: auto;
+padding-top: 40px;
 }
 
 input {
@@ -85,6 +85,12 @@ input {
     height: 50px;
     background: red;
 }
+
+#wachtwoord {
+    padding-top: 100px;
+}
+
+
 
 
 /*

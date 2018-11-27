@@ -82,7 +82,7 @@
 }
 /*/ Inlogscherm */
 
-main#inloggen { 
+main { 
     width: 400px;
     margin: 0px auto;
     margin-top: 150px;
@@ -90,26 +90,26 @@ main#inloggen {
 
 }
 
-#inloggen h2 {
+main h2 {
     color: wheat;
     padding-top: 10px;
 
 }
 
-#inloggen form {
+main form {
     color: wheat;
     height: 40px;
     width: 400px;
     padding-top: 20px;
 }
 
-#inloggen form input {
+main form input {
     width: 400px;
     height: 40px;
 }
 
 
-div {
+#inloggen {
     height: 200px;
     padding-top: -20px;
     background-color:rgba(0,0,0,0.4)

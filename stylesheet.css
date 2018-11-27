@@ -74,12 +74,16 @@
 /* bezoeker inlog pagina */
 main {
     padding-top: 100px;
+    background: black;
+    opacity: 0.5;
 }
 
 main h2 {
     text-align: center;
+    color: wheat
 }
 form {
+   
 margin: 0 auto;
 opacity: 0.9;
 width: 600px;

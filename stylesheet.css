@@ -70,6 +70,16 @@
     src: url("KGTenThousandReasons.ttf");
 }
 
+
+/* bezoeker inlog pagina */
+form {
+width: 400px;
+margin: 0 auto;
+background: black; 
+opacity: 0.9;
+}
+
+
 /*
 
 @media only screen and (max-width: 400px) {

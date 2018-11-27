@@ -33,6 +33,13 @@
  article {
      display: flex;
      justify-content: center;
+     align-items: center;
+     flex-flow: row wrap;
+ }
+
+ iframe {
+    width: 420px; 
+    height: 315px;
  }
 
 #mainnav a {

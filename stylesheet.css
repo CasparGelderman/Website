@@ -80,14 +80,26 @@
     font-family: Eraser;
     src: url("KGTenThousandReasons.ttf");
 }
-/*/ Inlogscherm */
 
+/* footer */
+footer {
+    bottom: 0;
+    position: fixed; 
+    width: 100%;
+    color: wheat; 
+    background-color: rgba(0,0,0, 0.4);
+    text-align: center;
+    font-size: 11px;
+ 
+}
+
+/* Inlogscherm en registerscherm */
 #register {
     height: 390px;
     background-color: rgba(0,0,0,0.4);
 }
 
-#inloggen, {
+#inloggen {
     height: 270px;
     padding-top: -20px;
     background-color:rgba(0,0,0,0.4);

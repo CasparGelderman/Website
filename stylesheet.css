@@ -82,38 +82,49 @@
 }
 /*/ Inlogscherm */
 
-main { 
+#register {
+    height: 390px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#inloggen, {
+    height: 270px;
+    padding-top: -20px;
+    background-color:rgba(0,0,0,0.4);
+}
+
+#inloggen main, #register main{ 
     width: 400px;
     margin: 0px auto;
     margin-top: 150px;
     text-align: center;
 
 }
-
-main h2 {
+#inloggen main  h2, #register main h2 {
     color: wheat;
     padding-top: 10px;
 
 }
-
-main form {
+#inloggen main form, #register main form {
     color: wheat;
     height: 40px;
     width: 400px;
     padding-top: 20px;
 }
-
-main form input {
+#inloggen main form input, #register main form input {
     width: 400px;
-    height: 40px;
+    height: 40px; 
 }
 
-
-#inloggen {
-    height: 200px;
+/* Registerscherm
+#register {
+    height: 270px; 
     padding-top: -20px;
-    background-color:rgba(0,0,0,0.4)
-}
+    background-color: ()
+} */
+
+
+
 
 
 

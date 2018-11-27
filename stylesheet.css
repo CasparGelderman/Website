@@ -72,11 +72,13 @@
 
 
 /* bezoeker inlog pagina */
-main h2 {
-    
-    text-align: center;
+main {
+    padding-top: 100px;
 }
 
+main h2 {
+    text-align: center;
+}
 form {
 margin: 0 auto;
 opacity: 0.9;
@@ -88,7 +90,7 @@ input {
     
     width: 500px;
     height: 50px;
-    background: red;
+    background: wheat;
 }
 
 

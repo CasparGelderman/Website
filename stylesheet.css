@@ -30,6 +30,11 @@
      background-image: url("Blackboard.png");
  }
 
+ article {
+     display: flex;
+     justify-content: center;
+ }
+
 #mainnav a {
     color: white;
     height: 64px;

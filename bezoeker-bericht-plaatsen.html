@@ -61,17 +61,26 @@
     </ul>
   </nav>
 
-  <!-- inlog scherm -->
-  <div id="inloggen">
-    <main>
-      <h2>Inloggen</h2>
-      <form method="get" action="">
-        <input type="text" name="emailaddress" placeholder="E-mail address"><br> <br>
-        <input type="password" name="wachtwoord" placeholder="Wachtwoord"><br> <br>
-        <input type="submit" name="log in" value="log in">
-      </form>
-    </main>
-  </div>
+  <!-- Bericht plaatsen voor forum -->
+  <main id="Berichtplaatsen">
+    <form method="get" action="">
+      <label for="Naam">Naam: </label>
+      <input type="text" name="naam"><br>
+      <label for="Onderwerp"> Ik vind deze onderwerpen lastig... </label>
+      <select name="vak">
+        <option value="Breuken">Breuken</option>
+        <option value="Tafels"> Tafels </option>
+        <option value="Wortels"> Wortels </option>
+        <option value="Optellen en aftrekken"> Optellen en aftrekken</option>
+      </select> <br>
+      <label for="Forum bericht"> Forum bericht: </label>
+      <textarea name="Forum bericht"> </textarea> <br>
+      <input type="submit" name="Posten" value="Posten">
+
+    </form>
+  </main>
+
+
 
   <footer>
     <p> &copy; Caspar Gelderman en Sara Li Wijnia </p>

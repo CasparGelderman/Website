@@ -156,14 +156,7 @@ footer p {
 }
 
 /* over ons pagina */
-/* #overons {
-    margin-top: 60px;
-    height: 500px;
-    background-color: rgba(0, 0, 0, 0.4);
-} */
-
-#overons {
-    
+#overons {  
     display: block;
     margin-top: 60px;
     height: 500px;
@@ -171,12 +164,14 @@ footer p {
     color: wheat;
     text-align: center;
 }
-
 #overons p {
     font-family: "Arial";
     width: 600px;
     margin: 0 auto;
 }
+
+/* bezoeker bericht plaatsen pagina */
+
 
 
 

@@ -109,7 +109,9 @@ footer {
     background-color: rgba(0,0,0, 0.4);
     text-align: center;
     font-size: 11px;
- 
+}
+footer p {
+    font-family: "Arial";
 }
 
 /* Inlogscherm en registerscherm */
@@ -129,6 +131,7 @@ footer {
     margin: 0px auto;
     margin-top: 150px;
     text-align: center;
+    font-family: Arial;
 
 }
 #inloggen main  h2, #register main h2 {
@@ -143,16 +146,38 @@ footer {
     padding-top: 20px;
 }
 #inloggen main form input, #register main form input {
+    font-family: "Arial";
     width: 400px;
     height: 40px; 
 }
 
-/* Registerscherm
-#register {
-    height: 270px; 
-    padding-top: -20px;
-    background-color: ()
+#inloggen main form label, #register main form label {
+    font-family: "Arial";
+}
+
+/* over ons pagina */
+/* #overons {
+    margin-top: 60px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.4);
 } */
+
+#overons {
+    
+    display: block;
+    margin-top: 60px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: wheat;
+    text-align: center;
+}
+
+#overons p {
+    font-family: "Arial";
+    width: 600px;
+    margin: 0 auto;
+}
+
 
 
 

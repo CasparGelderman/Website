@@ -125,7 +125,13 @@ footer p {
     background-color:rgba(0,0,0,0.4);
 }
 
-#inloggen main, #register main{ 
+#berichtplaatsen {
+    height:  410px;
+    padding-top: -20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#inloggen main, #register main, #berichtplaatsen main{ 
     width: 400px;
     margin: 0px auto;
     margin-top: 150px;
@@ -133,26 +139,32 @@ footer p {
     font-family: Arial;
 
 }
-#inloggen main  h2, #register main h2 {
+#inloggen main  h2, #register main h2, #berichtplaatsen main h2{
     color: wheat;
     padding-top: 10px;
 
 }
-#inloggen main form, #register main form {
+#inloggen main form, #register main form, #berichtplaatsen main form {
     color: wheat;
     height: 40px;
     width: 400px;
     padding-top: 20px;
 }
-#inloggen main form input, #register main form input {
+#inloggen main form input, #register main form input, #berichtplaatsen main form input {
     font-family: "Arial";
     width: 400px;
     height: 40px; 
 }
 
-#inloggen main form label, #register main form label {
+#inloggen main form label, #register main form label, #berichtplaatsen main form label {
     font-family: "Arial";
 }
+
+#berichtplaatsen main form textarea {
+    width: 400px;
+    height: 150px;
+}
+
 
 /* over ons pagina */
 #overons {  
@@ -169,7 +181,21 @@ footer p {
     margin: 0 auto;
 }
 
-/* bezoeker bericht plaatsen pagina */
+/* forum bericht plaatsen pagina
+#berichtplaatsen main{
+    display: block; 
+    background-color: rgba(0, 0, 0, 0.4);
+    color: wehat;
+    text-align: center;
+    margin-top: 60px;
+    height: 500px;
+    color: wheat;
+}
+#berichtplaatsen main form {
+    font-family: Arial;
+} */
+
+
 
 
 /* mobile */

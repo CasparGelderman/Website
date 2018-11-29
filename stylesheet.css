@@ -46,6 +46,16 @@
     width: 420px; 
     height: 315px;
  }
+ #mainnav ul {
+    list-style: none;
+    display: flex;
+}
+
+#mainnav li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
 
 #mainnav a {
     color: white;
@@ -60,20 +70,9 @@
 }
 
 #mainnav a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: pink;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-#mainnav ul {
-    list-style: none;
-    display: flex;
-}
-
-#mainnav li {
-    width: 100%;
-    text-align: center;
-    position: relative;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 #mainnav li:hover .submenu > li {
@@ -181,18 +180,52 @@ footer p {
 
 /*
 
+/* mobile */
 @media only screen and (max-width: 400px) {
-    body {
 
+#mainnav {
+    background-color: rgba(0, 0, 0,0.6);
+}
+    header h2 {
+        padding-top: 20px;
+   
+        font-size: 22px;
     }
+    header img {
+        padding-bottom: 10px;
+        padding-top: 10px;
+     width: 80px;
+     height: 80px;   
+    }
+    #mainnav ul {
+      flex-direction: column;
+    }
+#mainnav a {
+    height: 48px;
+}
+.submenu {
+    position: static;
+    width: 100%;
+}
+.submenu a {
+    width: 95%;
+    margin: 0auto;
+background-color: rgba(99, 99, 99, 0.3);
+}
 }
 
+/* Tablets */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
     body {
 
     }
+
+    #mainnav { 
+        background-color: red; 
+    }
 }
 
+/* desktops */
 @media only screen and (min-width: 961px) {
     body {
 

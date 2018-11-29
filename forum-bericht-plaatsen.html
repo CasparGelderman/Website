@@ -53,30 +53,31 @@
           <li>
             <a href="bezoeker-register.html">Registreren</a>
           </li>
-
         </ul>
       </li>
     </ul>
   </nav>
 
-  <!-- register scherm -->
-  <div id="register">
-    <main>
-      <h2>Register</h2>
-      <form method="get" action="">
-        <label>E-mail address</label>
-        <input type="text" name="emailaddress" placeholder="E-mail address"><br> <br>
+  <!-- Bericht plaatsen voor forum -->
+  <main id="Berichtplaatsen">
+    <form method="get" action="">
+      <label for="Naam">Naam: </label>
+      <input type="text" name="naam"><br>
+      <label for="Onderwerp"> Ik vind deze onderwerpen lastig... </label>
+      <select name="vak">
+        <option value="Breuken">Breuken</option>
+        <option value="Tafels"> Tafels </option>
+        <option value="Wortels"> Wortels </option>
+        <option value="Optellen en aftrekken"> Optellen en aftrekken</option>
+      </select> <br>
+      <label for="Forum bericht"> Forum bericht: </label>
+      <textarea name="Forum bericht"> </textarea> <br>
+      <input type="submit" name="Posten" value="Posten">
 
-        <label> Wachtwoord </label>
-        <input type="password" name="wachtwoord" placeholder="Wachtwoord"><br>
+    </form>
+  </main>
 
-        <label> Herhaal wachtwoord </label>
-        <input type="password" name="wachtwoord" placeholder="Herhaal wachtwoord"><br><br>
 
-        <input type="submit" name="Registreren" value="Registreren">
-      </form>
-    </main>
-  </div>
 
   <footer>
     <p> &copy; Caspar Gelderman en Sara Li Wijnia </p>

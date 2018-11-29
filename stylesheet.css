@@ -35,6 +35,18 @@
      background-image: url("Blackboard.png");
     }
 
+section {
+    margin-top: 2em;
+    display: inline;
+    display: block;
+    color: wheat;
+    text-align: center;
+}
+
+section p {
+    font-family: "Arial";
+}
+
  article {
      display: flex;
      justify-content: center;
@@ -43,11 +55,16 @@
  }
 
  .videos {
+    word-wrap: break-word;
+ }
+
+ .text {
 
  }
 
  iframe {
     margin: 2em;
+    display: flex;
     width: 420px;
     height: 315px; 
  }
@@ -113,6 +130,12 @@ footer {
     background-color: rgba(0,0,0, 0.4);
     text-align: center;
     font-size: 11px;
+<<<<<<< HEAD
+=======
+}
+footer p {
+    font-family: "Arial";
+>>>>>>> 812030b505098cc04c9eded0233da0ddadd52237
 }
 
 /* Inlogscherm en registerscherm */
@@ -132,6 +155,7 @@ footer {
     margin: 0px auto;
     margin-top: 150px;
     text-align: center;
+    font-family: Arial;
 
 }
 #inloggen main  h2, #register main h2 {
@@ -146,16 +170,33 @@ footer {
     padding-top: 20px;
 }
 #inloggen main form input, #register main form input {
+    font-family: "Arial";
     width: 400px;
     height: 40px; 
 }
 
-/* Registerscherm
-#register {
-    height: 270px; 
-    padding-top: -20px;
-    background-color: ()
-} */
+#inloggen main form label, #register main form label {
+    font-family: "Arial";
+}
+
+/* over ons pagina */
+#overons {  
+    display: block;
+    margin-top: 60px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: wheat;
+    text-align: center;
+}
+#overons p {
+    font-family: "Arial";
+    width: 600px;
+    margin: 0 auto;
+}
+
+/* bezoeker bericht plaatsen pagina */
+
+
 
 
 

@@ -16,8 +16,9 @@
  }
 
  header h2 {
+     display: inline;
      padding: 16px;
-     padding-bottom: 0px;
+     padding-bottom: 0px;   
  }
 
  header img {
@@ -25,6 +26,13 @@
      padding-bottom: 0px;
      width: 2.5em;
      height: 2.4em;
+ }
+
+ header form {
+     margin-top: 20px;
+     background-color: red;
+display: block;
+justify-content: right;
  }
 
  nav {
@@ -238,9 +246,7 @@ background-color: rgba(99, 99, 99, 0.3);
 
     }
 
-    #mainnav { 
-        background-color: red; 
-    }
+
 }
 
 /* desktops */

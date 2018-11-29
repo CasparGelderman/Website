@@ -20,10 +20,10 @@
      padding-bottom: 0px;
  }
 
- header img {
+ .logo {
      padding: 16px;
      padding-bottom: 0px;
-     width: 2.5em;
+     width: 2.6em;
      height: 2.4em;
  }
 
@@ -35,9 +35,13 @@
      background-image: url("Blackboard.png");
     }
 
+main h2 {
+    color: wheat;
+}
+
 section {
-    margin-top: 2em;
     display: inline;
+    margin: 2em;
     display: block;
     color: wheat;
     text-align: center;
@@ -56,10 +60,6 @@ section p {
 
  .videos {
     word-wrap: break-word;
- }
-
- .text {
-
  }
 
  iframe {
@@ -106,7 +106,7 @@ section p {
 .submenu li {
     display: none;
     position: absolute;
-    top: 0;
+    top: 0;m
 }
 
 .submenu {
@@ -133,7 +133,8 @@ footer {
 <<<<<<< HEAD
 =======
 }
-footer p {
+p {
+    color: wheat;
     font-family: "Arial";
 >>>>>>> 812030b505098cc04c9eded0233da0ddadd52237
 }

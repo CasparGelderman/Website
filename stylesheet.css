@@ -86,6 +86,16 @@ section p {
     width: 420px;
     height: 315px; 
  }
+ #mainnav ul {
+    list-style: none;
+    display: flex;
+}
+
+#mainnav li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
 
 #mainnav a {
     color: white;
@@ -100,20 +110,9 @@ section p {
 }
 
 #mainnav a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: pink;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-#mainnav ul {
-    list-style: none;
-    display: flex;
-}
-
-#mainnav li {
-    width: 100%;
-    text-align: center;
-    position: relative;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 #mainnav li:hover .submenu > li {
@@ -164,7 +163,13 @@ footer {
     background-color:rgba(0,0,0,0.4);
 }
 
-#inloggen main, #register main{ 
+#berichtplaatsen {
+    height:  410px;
+    padding-top: -20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#inloggen main, #register main, #berichtplaatsen main{ 
     width: 400px;
     margin: 0px auto;
     margin-top: 150px;
@@ -172,26 +177,32 @@ footer {
     font-family: Arial;
 
 }
-#inloggen main  h2, #register main h2 {
+#inloggen main  h2, #register main h2, #berichtplaatsen main h2{
     color: wheat;
     padding-top: 10px;
 
 }
-#inloggen main form, #register main form {
+#inloggen main form, #register main form, #berichtplaatsen main form {
     color: wheat;
     height: 40px;
     width: 400px;
     padding-top: 20px;
 }
-#inloggen main form input, #register main form input {
+#inloggen main form input, #register main form input, #berichtplaatsen main form input {
     font-family: "Arial";
     width: 400px;
     height: 40px; 
 }
 
-#inloggen main form label, #register main form label {
+#inloggen main form label, #register main form label, #berichtplaatsen main form label {
     font-family: "Arial";
 }
+
+#berichtplaatsen main form textarea {
+    width: 400px;
+    height: 150px;
+}
+
 
 /* over ons pagina */
 #overons {  
@@ -207,29 +218,69 @@ footer {
     margin: 0 auto;
 }
 
-/* bezoeker bericht plaatsen pagina */
+/* forum bericht plaatsen pagina
+#berichtplaatsen main{
+    display: block; 
+    background-color: rgba(0, 0, 0, 0.4);
+    color: wehat;
+    text-align: center;
+    margin-top: 60px;
+    height: 500px;
+    color: wheat;
+}
+#berichtplaatsen main form {
+    font-family: Arial;
+} */
 
 
 
 
-
-
-
-
-/*
-
+/* mobile */
 @media only screen and (max-width: 400px) {
-    body {
 
+#mainnav {
+    background-color: rgba(0, 0, 0,0.6);
+}
+    header h2 {
+        padding-top: 20px;
+   
+        font-size: 22px;
     }
+    header img {
+        padding-bottom: 10px;
+        padding-top: 10px;
+     width: 80px;
+     height: 80px;   
+    }
+    #mainnav ul {
+      flex-direction: column;
+    }
+#mainnav a {
+    height: 48px;
+}
+.submenu {
+    position: static;
+    width: 100%;
+}
+.submenu a {
+    width: 95%;
+    margin: 0auto;
+background-color: rgba(99, 99, 99, 0.3);
+}
 }
 
+/* Tablets */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
     body {
 
     }
+
+    #mainnav { 
+        background-color: red; 
+    }
 }
 
+/* desktops */
 @media only screen and (min-width: 961px) {
     body {
 

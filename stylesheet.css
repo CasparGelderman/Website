@@ -243,14 +243,11 @@ section p {
     height: 40px;
     width: 400px;
     padding-top: 20px;
-    background-color: 
 }
 #inloggen main form input, #register main form input, #berichtplaatsen main form input {
     font-family: "Arial";
     width: 400px;
     height: 40px; 
-    background-color: 
-    
 }
 
 #inloggen main form label, #register main form label, #berichtplaatsen main form label {
@@ -269,7 +266,7 @@ section p {
     display: block;
   margin-right: 0px;
     margin-left: 0px;
-    height: 430px;
+    height: 550px;
     color: wheat;
     text-align: center;
     background: rgba(0, 0, 0, 0.4);
@@ -277,7 +274,7 @@ section p {
 }
 #overons p {
     font-family: "Arial";
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
     padding-bottom: 10px;
 }
@@ -314,7 +311,6 @@ section p {
         padding-left: 5px;
         padding-right: 5px;
         font-family: "Arial";
-        padding-bottom: -1px;
     }
    
 
@@ -352,50 +348,26 @@ section p {
 background-color: rgba(99, 99, 99, 0.3);
 }
 
-/* forum posts */
-
-.forumpost {
-    border: 2px solid #7B6F59;
-    font-family: "Arial";
-    background-color: rgba(0, 0, 0, 0.3);
-
-#inloggen main form input, #register main form input, #berichtplaatsen main form input {
-    font-family: "Arial";
-    width: 300px;
-    height: 40px; 
-}
-#inloggen main form, #register main form, #berichtplaatsen main form {
-    color: wheat;
-    height: 40px;
-    width: 400px;
-    padding-top: 20px;
-    padding-right: 20px;
-}
-#inloggen main  h2, #register main h2, #berichtplaatsen main h2{
-    color: wheat;
-    padding-top: 10px;
-padding-right: 20px;
-}
 
 /* mobile voor over ons */
+#overons {
+    width: 200px;
+}
+#overons p {
+    width: 200px;
+}
 
+/* register en inlog pagina voor mobile */
+#inloggen main, #register main, #berichtplaatsen main{ 
+    width: 250px;
+    margin-top: 50px;
+}
+#inloggen main form, #register main form, #berichtplaatsen main form {
+    width: 250px;
+}
+#inloggen main form input, #register main form input, #berichtplaatsen main form input {
+    width: 250px;   
+}
 
 }
 
-
-
-/* Tablets */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-    body {
-
-    }
-
-
-}
-
-/* desktops */
-@media only screen and (min-width: 961px) {
-    body {
-
-    }
-}

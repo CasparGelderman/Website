@@ -5,6 +5,14 @@
     font-family: Eraser, serif;
 }
 
+
+/* algemeen */
+
+body {
+    background-image: url("afbeeldingen/Blackboard.png");
+    position: relative;
+}
+
  header {
      padding: 16px;
      padding-bottom: 0px;
@@ -14,6 +22,10 @@
      font-size: 2em;
      background: rgba(0, 0, 0, 0.4);
      align-items: flex-start;
+ }
+
+ article {
+     display: flex;
  }
 
  header h2 {
@@ -28,13 +40,6 @@
     padding-left: 0px;
 }
 
- .logo {
-     padding: 16px;
-     padding-bottom: 0px;
-     width: 2.6em;
-     height: 2.4em;
- }
-
  header form {
      margin-top: 20px;
      background-color: red;
@@ -45,21 +50,20 @@ align-self: stretch;
     background: rgba(0, 0, 0, 0.4);
  }
 
- body {
-     background-image: url("afbeeldingen/Blackboard.png");
-     position: relative;
-    }
 
-body::after {
-    content: '';
-    display: block;
-    height: -20px;
+ /* footer */
+
+footer {
+    bottom: 0;
+    width: 100%;
+    color: wheat; 
+    background-color: rgba(0,0,0, 0.4);
+    text-align: center;
+    font-size: 11px;
 }
-
-
-
-main {
-    margin: 2em;
+footer p {
+    font-family: "Arial";
+    float: bottom;
 }
 
 p {
@@ -67,42 +71,28 @@ p {
     font-family: "Arial";
 }
 
-main h2 {
-    color: wheat;
+.logo {
+    padding: 16px;
+    padding-bottom: 0px;
+    width: 2.6em;
+    height: 2.4em;
 }
 
-section {
-    display: inline;
-    margin: 2em;
-    display: block;
-    color: wheat;
-    text-align: center;
+.submenu li {
+    display: none;
+    position: absolute;
+    top: 0;
 }
 
-section p {
-    font-family: "Arial";
-}
-
- article {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-flow: row wrap;
- }
-
- #indexforum {
-     display: block;
-
- }
-
- iframe {
-    margin: 2em;
+.submenu {
     display: flex;
-    width: 420px;
-    height: 315px; 
- }
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
 
- #mainnav ul {
+#mainnav ul {
     list-style: none;
     display: flex;
 }
@@ -136,39 +126,51 @@ section p {
     top: 0;
 }
 
-.submenu li {
-    display: none;
-    position: absolute;
-    top: 0;
+/*Homepage*/
+
+main {
+    margin: 2em;
 }
 
-.submenu {
+section {
+    display: inline;
+    margin: 2em;
+    display: block;
+    color: wheat;
+    text-align: center;
+}
+
+section {
+    display: inline;
+    margin: 2em;
+    display: block;
+    color: wheat;
+    text-align: center;
+}
+
+main h2 {
+    color: wheat;
+}
+
+section p {
+    font-family: "Arial";
+}
+
+ iframe {
+    margin: 2em;
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4);
-}
-
+    width: 420px;
+    height: 315px; 
+ }
 
 @font-face {
     font-family: Eraser;
     src: url("lettertypes/KGTenThousandReasons.ttf");
 }
 
-/* footer */
-footer {
-    bottom: 0;
-    width: 100%;
-    color: wheat; 
-    background-color: rgba(0,0,0, 0.4);
-    text-align: center;
-    font-size: 11px;
-}
-footer p {
-    font-family: "Arial";
-    float: bottom;
-}
+#indexforum {
+    display: block;
+ }
 
 /* forum */
 .posts {
@@ -290,10 +292,7 @@ background-color: rgba(99, 99, 99, 0.3);
 }
 
 /* forum posts */
-#forummain  h2{
-padding-top: 30px;
-padding-bottom: 5px;
-}
+
 .forumpost {
     border: 2px solid #7B6F59;
     font-family: "Arial";
@@ -316,8 +315,6 @@ padding-bottom: 5px;
     padding: 5px;
 }
 
-
-
 .forumpost p {
     border: 1px solid#7B6F59;
     padding: 10px;
@@ -327,20 +324,7 @@ padding-bottom: 5px;
     padding-bottom: -1px;
 }
 
-
-/* Tablets */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-    body {
-
-    }
-
-
+#forummain  h2 {
+    padding-top: 30px;
+    padding-bottom: 5px;
 }
-
-/* desktops */
-@media only screen and (min-width: 961px) {
-    body {
-
-    }
-}
-

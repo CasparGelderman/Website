@@ -13,11 +13,13 @@
      text-align: center;
      font-size: 2em;
      background: rgba(0, 0, 0, 0.4);
+     align-items: flex-start;
  }
 
- header h2{
+ header h2 {
+     display: inline;
      padding: 16px;
-     padding-bottom: 0px;
+     padding-bottom: 0px;   
  }
 
  header h5{
@@ -31,6 +33,12 @@
      padding-bottom: 0px;
      width: 2.6em;
      height: 2.4em;
+ }
+
+ header form {
+     margin-top: 20px;
+     background-color: red;
+align-self: stretch;
  }
 
  nav {
@@ -147,8 +155,10 @@ footer {
     background-color: rgba(0,0,0, 0.4);
     text-align: center;
     font-size: 11px;
-    height: 20px;
-    position: fixed;
+}
+footer p {
+    font-family: "Arial";
+    float: bottom;
 }
 
 /* Inlogscherm en registerscherm */
@@ -276,9 +286,7 @@ background-color: rgba(99, 99, 99, 0.3);
 
     }
 
-    #mainnav { 
-        background-color: red; 
-    }
+
 }
 
 /* desktops */

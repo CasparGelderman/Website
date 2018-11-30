@@ -112,7 +112,9 @@ align-self: stretch;
 
 /* search bar videos  en forum */
 #searchbar  {
-    padding: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom:10px;
 }
 #searchbar input {
     width: 300px;

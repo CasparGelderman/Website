@@ -46,7 +46,7 @@ align-self: stretch;
  }
 
  body {
-     background-image: url("Blackboard.png");
+     background-image: url("afbeeldingen/Blackboard.png");
      position: relative;
     }
 
@@ -131,7 +131,7 @@ section p {
 .submenu li {
     display: none;
     position: absolute;
-    top: 0;m
+    top: 0;
 }
 
 .submenu {
@@ -142,9 +142,21 @@ section p {
     background: rgba(0, 0, 0, 0.4);
 }
 
+/* #submenuforumonderwerpen {
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+#submenuforumonderwerpen li:hover {
+    display: block;
+    top: 0;
+} */
+
+
 @font-face {
     font-family: Eraser;
-    src: url("KGTenThousandReasons.ttf");
+    src: url("lettertypes/KGTenThousandReasons.ttf");
 }
 
 /* footer */

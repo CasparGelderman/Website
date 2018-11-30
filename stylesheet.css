@@ -208,11 +208,14 @@ footer p {
     height: 40px;
     width: 400px;
     padding-top: 20px;
+    background-color: 
 }
 #inloggen main form input, #register main form input, #berichtplaatsen main form input {
     font-family: "Arial";
     width: 400px;
     height: 40px; 
+    background-color: 
+    
 }
 
 #inloggen main form label, #register main form label, #berichtplaatsen main form label {
@@ -242,10 +245,49 @@ footer p {
     margin: 0 auto;
 }
 
+/* forum posts */
+#forummain  h2{
+    padding-top: 30px;
+    padding-bottom: 5px;
+    }
+    .forumpost {
+        border: 2px solid #7B6F59;
+        font-family: "Arial";
+        background-color: rgba(0, 0, 0, 0.3);
+    
+        margin-bottom: 20px;
+    }
+    .forumposthead {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: wheat;
+        font-size: 15px;
+        font-family: "Arial";
+    
+    }
+    
+    .forumposthead h3 {
+        font-family: "Arial";
+        padding: 5px;
+    }
+    
+    
+    
+    .forumpost p {
+        border: 1px solid#7B6F59;
+        padding: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-family: "Arial";
+        padding-bottom: -1px;
+    }
+    
 
 /* mobile */
 @media only screen and (max-width: 400px) {
 
+    /* mobile voor het menu */
 #mainnav {
     background-color: rgba(0, 0, 0,0.6);
 }
@@ -275,45 +317,32 @@ footer p {
     margin: 0auto;
 background-color: rgba(99, 99, 99, 0.3);
 }
-}
 
-/* forum posts */
-#forummain  h2{
-padding-top: 30px;
-padding-bottom: 5px;
-}
-.forumpost {
-    border: 2px solid #7B6F59;
+/* mobile voor registering / inloggen */
+
+#inloggen main form input, #register main form input, #berichtplaatsen main form input {
     font-family: "Arial";
-    background-color: rgba(0, 0, 0, 0.3);
-
-    margin-bottom: 20px;
+    width: 300px;
+    height: 40px; 
 }
-.forumposthead {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#inloggen main form, #register main form, #berichtplaatsen main form {
     color: wheat;
-    font-size: 15px;
-    font-family: "Arial";
+    height: 40px;
+    width: 400px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+#inloggen main  h2, #register main h2, #berichtplaatsen main h2{
+    color: wheat;
+    padding-top: 10px;
+padding-right: 20px;
+}
+
+/* mobile voor over ons */
+
 
 }
 
-.forumposthead h3 {
-    font-family: "Arial";
-    padding: 5px;
-}
-
-
-
-.forumpost p {
-    border: 1px solid#7B6F59;
-    padding: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-family: "Arial";
-    padding-bottom: -1px;
-}
 
 
 /* Tablets */

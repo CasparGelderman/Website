@@ -90,12 +90,9 @@ section p {
      flex-flow: row wrap;
  }
 
+ #indexforum {
+     display: block;
 
-
- #indexforum div {
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
  }
 
  iframe {
@@ -243,7 +240,8 @@ footer p {
 /* over ons pagina */
 #overons {  
     display: block;
-  margin-left: -1px;
+  margin-right: 0px;
+    margin-left: 0px;
     height: 310px;
     color: wheat;
     text-align: center;

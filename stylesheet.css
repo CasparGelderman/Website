@@ -278,6 +278,25 @@ background-color: rgba(99, 99, 99, 0.3);
 }
 }
 
+/* forum posts */
+.forumpost {
+    border: 1px solid black;
+    font-family: "Arial";
+    background-color: rgba(0, 0, 0, 0.8);
+    
+}
+
+.forumpost h2 {
+display: flex; 
+justify-content: flex-end;
+color: wheat;
+}
+
+.forumpost h3 {
+    border: 1px solid black;
+    color: wheat;
+}
+
 /* Tablets */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
     body {

@@ -111,7 +111,7 @@ section p {
     height: 64px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: 
     text-decoration: none;
     transition: background 0.4s;
     font-weight: bold;

@@ -230,32 +230,18 @@ footer p {
 /* over ons pagina */
 #overons {  
     display: block;
-    margin-top: 60px;
-    height: 500px;
+  margin-left: -1px;
+    height: 310px;
     color: wheat;
     text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
 }
 #overons p {
     font-family: "Arial";
     width: 600px;
     margin: 0 auto;
 }
-
-/* forum bericht plaatsen pagina
-#berichtplaatsen main{
-    display: block; 
-    background-color: rgba(0, 0, 0, 0.4);
-    color: wehat;
-    text-align: center;
-    margin-top: 60px;
-    height: 500px;
-    color: wheat;
-}
-#berichtplaatsen main form {
-    font-family: Arial;
-} */
-
-
 
 
 /* mobile */

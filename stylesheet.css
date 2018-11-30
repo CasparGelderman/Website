@@ -68,6 +68,7 @@ footer p {
 p {
     color: wheat;
     font-family: "Arial";
+    word-wrap: break-word;
 }
 
 .logo {
@@ -243,15 +244,16 @@ section p {
     display: block;
   margin-right: 0px;
     margin-left: 0px;
-    height: 310px;
     color: wheat;
     text-align: center;
-    background: rgba(0, 0, 0, 0.4);
     width: 100%;
+    padding: 2em;
+    padding-left: 20em;
+    padding-right: 20em;
 }
 #overons p {
     font-family: "Arial";
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
 }
 

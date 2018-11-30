@@ -86,6 +86,7 @@ section p {
     width: 420px;
     height: 315px; 
  }
+
  #mainnav ul {
     list-style: none;
     display: flex;
@@ -149,6 +150,19 @@ footer {
     font-size: 11px;
     height: 20px;
     position: fixed;
+}
+
+/* forum */
+.posts {
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: wheat;
+    background-color:rgba(0,0,0,0.4);
+}
+
+.posts h3 {
+    color: wheat;
 }
 
 /* Inlogscherm en registerscherm */

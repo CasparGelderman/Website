@@ -50,12 +50,6 @@ align-self: stretch;
      position: relative;
     }
 
-body::after {
-    content: '';
-    display: block;
-    height: -20px;
-}
-
 main {
     margin: 2em;
 }
@@ -111,7 +105,7 @@ section p {
     height: 64px;
     display: flex;
     align-items: center;
-    justify-content: 
+    justify-content: center;
     text-decoration: none;
     transition: background 0.4s;
     font-weight: bold;
@@ -195,13 +189,13 @@ footer p {
 
 #inloggen {
     height: 270px;
-    padding-top: -20px;
+    padding-bottom: 20px;
     background-color:rgba(0,0,0,0.4);
 }
 
 #berichtplaatsen {
     height:  410px;
-    padding-top: -20px;
+
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -301,7 +295,7 @@ footer p {
 }
 .submenu a {
     width: 95%;
-    margin: 0auto;
+    margin: 0 auto;
 background-color: rgba(99, 99, 99, 0.3);
 }
 }
@@ -322,4 +316,3 @@ background-color: rgba(99, 99, 99, 0.3);
     }
 }
 
-*/

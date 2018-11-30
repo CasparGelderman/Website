@@ -88,6 +88,12 @@ section p {
      flex-flow: row wrap;
  }
 
+ #indexforum div {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+ }
+
  iframe {
     margin: 2em;
     display: flex;
@@ -244,32 +250,18 @@ footer p {
 /* over ons pagina */
 #overons {  
     display: block;
-    margin-top: 60px;
-    height: 500px;
+  margin-left: -1px;
+    height: 310px;
     color: wheat;
     text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
 }
 #overons p {
     font-family: "Arial";
     width: 600px;
     margin: 0 auto;
 }
-
-/* forum bericht plaatsen pagina
-#berichtplaatsen main{
-    display: block; 
-    background-color: rgba(0, 0, 0, 0.4);
-    color: wehat;
-    text-align: center;
-    margin-top: 60px;
-    height: 500px;
-    color: wheat;
-}
-#berichtplaatsen main form {
-    font-family: Arial;
-} */
-
-
 
 
 /* mobile */
@@ -305,6 +297,45 @@ footer p {
 background-color: rgba(99, 99, 99, 0.3);
 }
 }
+
+/* forum posts */
+#forummain  h2{
+padding-top: 30px;
+padding-bottom: 5px;
+}
+.forumpost {
+    border: 2px solid #7B6F59;
+    font-family: "Arial";
+    background-color: rgba(0, 0, 0, 0.3);
+
+    margin-bottom: 20px;
+}
+.forumposthead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: wheat;
+    font-size: 15px;
+    font-family: "Arial";
+
+}
+
+.forumposthead h3 {
+    font-family: "Arial";
+    padding: 5px;
+}
+
+
+
+.forumpost p {
+    border: 1px solid#7B6F59;
+    padding: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: "Arial";
+    padding-bottom: -1px;
+}
+
 
 /* Tablets */
 @media only screen and (min-width: 401px) and (max-width: 960px) {

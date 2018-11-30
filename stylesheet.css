@@ -112,7 +112,9 @@ align-self: stretch;
 
 /* search bar videos  en forum */
 #searchbar  {
-    padding: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom:10px;
 }
 #searchbar input {
     width: 300px;
@@ -184,6 +186,13 @@ section p {
 #indexforum {
     display: block;
  }
+
+ h5 { 
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+
+} 
 
 /* forum */
 .posts {
@@ -260,7 +269,7 @@ section p {
     display: block;
   margin-right: 0px;
     margin-left: 0px;
-    height: 310px;
+    height: 430px;
     color: wheat;
     text-align: center;
     background: rgba(0, 0, 0, 0.4);
@@ -270,7 +279,9 @@ section p {
     font-family: "Arial";
     width: 600px;
     margin: 0 auto;
+    padding-bottom: 10px;
 }
+
 
 /* forum posts */
 #forummain  h2{
@@ -305,7 +316,7 @@ section p {
         font-family: "Arial";
         padding-bottom: -1px;
     }
-    
+   
 
 /* mobile */
 @media only screen and (max-width: 400px) {

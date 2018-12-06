@@ -20,7 +20,7 @@ body {
      color: white;
      text-align: center;
      font-size: 2em;
-     background: rgba(0, 0, 0, 0.4);
+     background: rgba(0, 0, 0, 1);
      align-items: flex-start;
  }
 
@@ -47,7 +47,7 @@ align-self: stretch;
  }
 
  nav {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 1);
  }
 
  p {
@@ -78,7 +78,7 @@ a {
     flex-direction: column;
     position: absolute;
     width: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.9);
 }
 
 #mainnav ul {
@@ -93,7 +93,7 @@ a {
 }
 
 #mainnav a {
-    color: white;
+    color: wheat;
     height: 64px;
     display: flex;
     align-items: center;
@@ -106,8 +106,8 @@ a {
 
 #mainnav a:hover {
     text-decoration: none;
-    color: pink;
-    background: rgba(0, 0, 0, 0.9);
+    color: green;
+    background: rgba(31, 31, 31, 1);
 }
 
 #mainnav li:hover .submenu > li {
@@ -298,7 +298,7 @@ en de tekst naast elkaar te krijgen */
 
 
 #inloggen main, #register main, #berichtplaatsen main{ 
-    width: 50%;
+    width: 40%;
     margin: 0px auto;
     margin-top: 150px;
     text-align: center;
@@ -338,7 +338,7 @@ en de tekst naast elkaar te krijgen */
     display: block;
   margin-right: 0px;
     margin-left: 0px;
-    height: 550px;
+    height: auto;
     color: wheat;
     text-align: center;
     background: rgba(0, 0, 0, 0.4);
@@ -350,13 +350,19 @@ en de tekst naast elkaar te krijgen */
     margin: 0 auto;
     padding-bottom: 10px;
 }
-
+#overons h2 {
+    padding-top: 10px;
+}
+#overons img {
+    margin: 5px;
+}
 
 /* forum posts */
 #forummain  h2{
     padding-top: 30px;
     padding-bottom: 5px;
     }
+
     .forumpost {
         border: 2px solid #7B6F59;
         font-family: "Arial";
@@ -391,7 +397,7 @@ en de tekst naast elkaar te krijgen */
 
     /* mobile voor het menu */
 #mainnav {
-    background-color: rgba(0, 0, 0,0.6);
+    background-color: rgba(0, 0, 0,1);
 }
     header h2 {
         padding-top: 20px;
@@ -415,18 +421,18 @@ en de tekst naast elkaar te krijgen */
     width: 100%;
 }
 .submenu a {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
-background-color: rgba(99, 99, 99, 0.3);
+background-color: rgba(20, 20, 20, 1);
 }
 
 /* mobile voor over ons */
-#overons {
-    width: 200px;
-}
+
 #overons p {
-    width: 200px;
+ width: 75%;
 }
+
+
 
 /* register en inlog pagina voor mobile */
 #inloggen main, #register main, #berichtplaatsen main{ 

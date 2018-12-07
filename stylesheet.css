@@ -139,6 +139,7 @@ footer {
     background-color: rgba(0,0,0, 0.4);
     text-align: center;
     font-size: 11px;
+    
 }
 footer p {
     font-family: "Arial";
@@ -281,9 +282,11 @@ en de tekst naast elkaar te krijgen */
 
 
 /* Inlogscherm en registerscherm */
+
 #register {
     height: 390px;
     background-color: rgba(0,0,0,0.4);
+    margin-bottom: 20px;
 }
 #inloggen {
     height: 270px;
@@ -292,18 +295,17 @@ en de tekst naast elkaar te krijgen */
 }
 #berichtplaatsen {
     height:  410px;
-
+padding-bottom: 20px;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 
 #inloggen main, #register main, #berichtplaatsen main{ 
-    width: 40%;
+    width: 400px;
     margin: 0px auto;
     margin-top: 150px;
     text-align: center;
     font-family: Arial;
-
 }
 #inloggen main  h2, #register main h2, #berichtplaatsen main h2{
     color: wheat;
@@ -313,12 +315,14 @@ en de tekst naast elkaar te krijgen */
 #inloggen main form, #register main form, #berichtplaatsen main form {
     color: wheat;
     height: 40px;
-    width: 50%;
+    width: 300px;
     padding-top: 20px;
+    margin: 0px auto;
+
 }
 #inloggen main form input, #register main form input, #berichtplaatsen main form input {
     font-family: "Arial";
-    width: 50;
+    width: 250px;
     height: 40px; 
 }
 
@@ -327,7 +331,7 @@ en de tekst naast elkaar te krijgen */
 }
 
 #berichtplaatsen main form textarea {
-    width: 50%;
+    width: 150px;
     height: 150px;
     font-family: "Arial";
 }
@@ -436,14 +440,9 @@ background-color: rgba(20, 20, 20, 1);
 
 /* register en inlog pagina voor mobile */
 #inloggen main, #register main, #berichtplaatsen main{ 
-    width: 250px;
-    margin-top: 50px;
-}
-#inloggen main form, #register main form, #berichtplaatsen main form {
-    width: 250px;
-}
-#inloggen main form input, #register main form input, #berichtplaatsen main form input {
-    width: 250px;   
+    margin-top: 10px;
+    width: 100%
+
 }
 
 }

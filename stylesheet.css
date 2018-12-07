@@ -115,18 +115,18 @@ a {
     top: 0;
 }
 
-/* search bar videos  en forum */
+/* search bar voor videos & forum pagina*/
 #searchbar  {
     padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom:10px;
+    padding-bottom:25px;
 }
 #searchbar input {
     width: 300px;
     height: 25px;
 }
-#forummain h3 {
+#searchbarh3{
     color: wheat;
+    font-size: 20px;
 }
 
 
@@ -139,11 +139,11 @@ footer {
     background-color: rgba(0,0,0, 0.4);
     text-align: center;
     font-size: 11px;
-    
+    height: 20px;
 }
 footer p {
     font-family: "Arial";
-    float: bottom;
+
 }
 
 
@@ -362,6 +362,20 @@ padding-bottom: 20px;
 }
 
 /* forum posts */
+.forumthreadall {
+    display: block;
+    background-color: rgba(0,0,0,0.4);
+ 
+    height: auto;
+    padding: 20px;
+}
+
+.forumthread {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border: 3px solid black;
+}
+
 #forummain  h2{
     padding-top: 30px;
     padding-bottom: 5px;
@@ -370,8 +384,8 @@ padding-bottom: 20px;
     .forumpost {
         border: 2px solid #7B6F59;
         font-family: "Arial";
-        background-color: rgba(0, 0, 0, 0.3);
-    
+        background-color: rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
         margin-bottom: 20px;
     }
     .forumposthead {
@@ -381,6 +395,7 @@ padding-bottom: 20px;
         color: wheat;
         font-size: 15px;
         font-family: "Arial";
+        background-color: rgba(0, 0, 0, 0.25);
     
     }
     .forumposthead h3 {
@@ -431,18 +446,14 @@ background-color: rgba(20, 20, 20, 1);
 }
 
 /* mobile voor over ons */
-
 #overons p {
  width: 75%;
 }
-
-
 
 /* register en inlog pagina voor mobile */
 #inloggen main, #register main, #berichtplaatsen main{ 
     margin-top: 10px;
     width: 100%
-
 }
 
 }

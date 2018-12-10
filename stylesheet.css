@@ -111,14 +111,13 @@ nav {
 
 /* search bar voor videos & forum pagina*/
 .searchbar  {
-    padding-right: 10px;
-    padding-bottom:10px;
     display: flex;
     width: 100%;
 flex-direction: row;
 justify-content: space-between; 
+padding-right: 10px;
+padding-bottom:10px;
 }
-
 .searchbar p { 
     padding-top: 5px;
 }
@@ -129,20 +128,14 @@ justify-content: space-between;
     color: white;
     text-decoration: underline;
 }
-
-
 .searchbar input {
     width: 300px;
     height: 25px;
- 
 }
 .searchbar h3 {
     color: wheat;
     font-size: 15px;
-    
 }
-
-
  /* footer */
 
 footer {
@@ -367,7 +360,6 @@ en de tekst naast elkaar te krijgen */
 
 
 /* forum categorie - rekenen, algemeen, vragen pagina */
-/* top right bottom left, border-width */ 
 .forumcategorie {
     background-color: rgba(0, 0, 0, 0.3);
     color: wheat;
@@ -419,39 +411,59 @@ margin: 0 10px 10px 0px;
 
 
 /* forum thread.  */
-.forumthreadall {
-    display: block;
-    background-color: rgba(0,0,0,0.4);
- 
-    height: auto;
-    padding: 20px;
-}
-
+/* top right bottom left, border-width */ 
 .forumthread {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    border: 3px solid black;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: wheat;
+    height: 100%;
+    width: 70%;
+margin: 50px auto 50px auto;
+padding: 10px;
+}
+.forumthread h3 {
+    margin: 25px 0px 0px 15px;
+    font-family: Arial;
+text-align: left;
+    }
+.main-post-and-posts { 
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid black;
 }
 
-#forummain  h2{
-    padding-top: 30px;
-    padding-bottom: 5px;
-    }
+.main-forumpost { 
+    background-color: rgba(0, 0, 0, 0.2);
+    border: solid black;
+    border-width: 2px;
+    text-align: left;
+}
+.main-forumpost h2 { 
+background-color: rgba(0, 0, 0, 0.5);
+border: solid black;
+border-width: 2px 0px 2px 0px;
+text-align: left;
 
+font-size: 26px;
+font-family: arial;
+padding: 5px 10px 5px 10px;
+}
+.main-forumpost p { 
+    padding: 5px 10px 5px 10px;
+ 
+}
+
+
+/* alles voor de comments eronder in een thread */ 
     .forumpost {
+        color: wheat;
         border: 2px solid #7B6F59;
-        font-family: "Arial";
         background-color: rgba(0, 0, 0, 0.2);
-    margin-top: 5px;
-        margin-bottom: 20px;
+    margin: 10px 15px 15px 10px;
     }
-    .forumposthead {
+    .forumposthead{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        color: wheat;
         font-size: 15px;
-        font-family: "Arial";
         background-color: rgba(0, 0, 0, 0.25);
     
     }
@@ -465,6 +477,7 @@ margin: 0 10px 10px 0px;
         padding-left: 5px;
         padding-right: 5px;
         font-family: "Arial";
+        text-align: left;
     }
    
 

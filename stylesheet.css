@@ -129,7 +129,7 @@ padding-bottom:10px;
     text-decoration: underline;
 }
 .searchbar input {
-    width: 300px;
+    width: 250px;
     height: 25px;
 }
 .searchbar h3 {
@@ -553,8 +553,24 @@ background-color: rgba(20, 20, 20, 1);
     margin-top: 10px;
     width: 100%
 }
+/* search bar voor het menu */
+.searchbar input {
+    width: 180px;
+    height: 25px;
+}
 
 /* mobile voor het forum */
+/* forum overzicht */
+main#forumalgemeen {
+width: 90%;
+}
+
+/* forum subonderwerpen pagina */
+.forumcategorie {
+    width: 90%;
+    }
+
+/* forumthreads */
 .forumthread { 
     margin: 20px auto 20px auto;
     width: 90%;
@@ -562,7 +578,9 @@ background-color: rgba(20, 20, 20, 1);
 .forumposthead h3 { 
     font-size: 12px;
 }
-
+.main-forumpost h2 { 
+   font-size: 18px;
+    }
 
 
 

@@ -510,7 +510,7 @@ padding: 5px 10px 5px 10px;
     }
 
 /* mobile */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 399px) {
 
     /* mobile voor het menu */
 #mainnav {
@@ -553,6 +553,18 @@ background-color: rgba(20, 20, 20, 1);
     margin-top: 10px;
     width: 100%
 }
+
+/* mobile voor het forum */
+.forumthread { 
+    margin: 20px auto 20px auto;
+    width: 90%;
+}
+.forumposthead h3 { 
+    font-size: 12px;
+}
+
+
+
 
 }
 

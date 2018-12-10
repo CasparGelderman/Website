@@ -12,21 +12,33 @@ body {
     background-image: url("afbeeldingen/Blackboard.png");
     position: relative;
 }
-
- header {
-     padding: 16px;
-     padding-bottom: 0px;
-     display: flex;
-     color: white;
-     text-align: center;
-     font-size: 2em;
-     background: rgba(0, 0, 0, 1);
-     align-items: flex-start;
- }
-
  article {
      display: flex;
+     width: 100%;
+     margin: 0 auto;
+     justify-content: space-around;
+     flex-wrap: wrap;
  }
+ p {
+    color: wheat;
+    font-family: "Arial";
+}
+a {
+    text-decoration: none; 
+    color: wheat;
+}
+
+/* Menu */
+header {
+    padding: 16px;
+    padding-bottom: 0px;
+    display: flex;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    background: rgba(0, 0, 0, 1);
+    align-items: flex-start;
+} 
 
  header h2 {
      display: inline;
@@ -46,33 +58,20 @@ body {
 align-self: stretch;
  }
 
- nav {
+nav {
     background: rgba(0, 0, 0, 1);
  }
-
- p {
-    color: wheat;
-    font-family: "Arial";
-}
-
-a {
-    text-decoration: none; 
-    color: wheat;
-}
-
 .logo {
     padding: 16px;
     padding-bottom: 0px;
     width: 2.6em;
     height: 2.4em;
 }
-
 .submenu li {
     display: none;
     position: absolute;
     top: 0;
 }
-
 .submenu {
     display: flex;
     flex-direction: column;
@@ -80,18 +79,15 @@ a {
     width: 100%;
     background: rgba(0, 0, 0, 0.9);
 }
-
 #mainnav ul {
     list-style: none;
     display: flex;
 }
-
 #mainnav li {
     width: 100%;
     text-align: center;
     position: relative;
 }
-
 #mainnav a {
     color: wheat;
     height: 64px;
@@ -103,30 +99,47 @@ a {
     font-weight: bold;
     font-size: 12px;
 }
-
 #mainnav a:hover {
     text-decoration: none;
     color: green;
     background: rgba(31, 31, 31, 1);
 }
-
 #mainnav li:hover .submenu > li {
     display: block;
     top: 0;
 }
 
 /* search bar voor videos & forum pagina*/
-#searchbar  {
+.searchbar  {
     padding-right: 10px;
-    padding-bottom:25px;
+    padding-bottom:10px;
+    display: flex;
+    width: 100%;
+flex-direction: row;
+justify-content: space-between; 
 }
-#searchbar input {
+
+.searchbar p { 
+    padding-top: 5px;
+}
+.searchbar p a { 
+    font-family: arial;
+}
+.searchbar p a:hover { 
+    color: white;
+    text-decoration: underline;
+}
+
+
+.searchbar input {
     width: 300px;
     height: 25px;
+ 
 }
-#searchbarh3{
+.searchbar h3 {
     color: wheat;
-    font-size: 20px;
+    font-size: 15px;
+    
 }
 
 
@@ -143,7 +156,6 @@ footer {
 }
 footer p {
     font-family: "Arial";
-
 }
 
 
@@ -154,16 +166,7 @@ main {
 }
 
 section {
-    display: inline;
-    margin: 2em;
-    display: block;
-    color: wheat;
-    text-align: center;
-}
-
-section {
-    display: inline;
-    margin: 2em;
+    margin-top: 15px;
     display: block;
     color: wheat;
     text-align: center;
@@ -212,74 +215,6 @@ section p {
 .posts h3 {
     color: wheat;
 }
-
-/* forum algemeen */
-main#forumalgemeen {
-    margin: 50px auto 50px auto;
-    display: block; 
-    background-color: rgba(0,0, 0, 0.4);
-height: auto;
-width: 70%;
-color: wheat;
-}
-main#forumalgemeen h2 { 
-background-color: rgba(0, 0, 0, 0.5);
-padding: 10px 0 0 20px;
-    border: solid black;
-    border-width: 5px 5px 4px 5px;
-}
-main#forumalgemeen h3 { 
-    font-family: arial;
-    padding: 5px;
-}
-#forumalgemeen ul {
-border: solid black;
-border-width: 0px 3px 3px 3px;
-    list-style-type: none;
-    padding: 10px;
-}
-#forumalgemeen ul li a {
-    padding: 5px 10px 5px 10px;
-  display: block;
-    bordeR: 2px solid black;
-    border-width: 3px 3px 0px 3px;
-font-family: arial; 
-font-size: 20px;
-background-color: rgba(0, 0, 0, 0.2);
-}
-#forumalgemeen ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-}
-#forumalgemeen ul ul {
-    border: 3px solid black;
-}
-#forumalgemeen ul ul h4{
-    font-family: Arial;
-    padding-bottom: 5px;
-}
-#forumalgemeen ul ul li {
-    font-family: arial;
-    padding: 2px 0px 2px 0px; 
-}
-#forumalgemeen ul ul li:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* de recente posts zijn een flexbox om de postnaam 
-en de tekst naast elkaar te krijgen */
-.post {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5px;
-}
-
-.post p:nth-child(2) {
-    font-size: 10px;
-}
-.post p:first-child:hover {
-    text-decoration: underline;
-}
-
 
 /* Inlogscherm en registerscherm */
 
@@ -360,14 +295,130 @@ padding-bottom: 20px;
 #overons img {
     margin: 5px;
 }
-/* forum thread overzicht met categorie (rekenen, vragen, algemeen etc */
-.forum-thread-overzicht {
-    background-color: rgba(0, 0, 0, 0.3);
-height: 100%;
 
+
+/* forum overzicht.  */
+main#forumalgemeen {
+    margin: 50px auto 50px auto;
+    display: block; 
+    background-color: rgba(0,0, 0, 0.4);
+height: auto;
+width: 70%;
+color: wheat;
+}
+main#forumalgemeen h2 { 
+background-color: rgba(0, 0, 0, 0.5);
+padding: 10px 0 0 20px;
+    border: solid black;
+    border-width: 5px 5px 4px 5px;
+}
+main#forumalgemeen h3 { 
+    font-family: arial;
+    padding: 5px;
+}
+#forumalgemeen ul {
+border: solid black;
+border-width: 0px 3px 3px 3px;
+    list-style-type: none;
+    padding: 10px;
+}
+#forumalgemeen ul li a {
+    padding: 5px 10px 5px 10px;
+  display: block;
+    bordeR: 2px solid black;
+    border-width: 3px 3px 0px 3px;
+font-family: arial; 
+font-size: 20px;
+background-color: rgba(0, 0, 0, 0.2);
+}
+#forumalgemeen ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#forumalgemeen ul ul {
+    border: 3px solid black;
+}
+#forumalgemeen ul ul h4{
+    font-family: Arial;
+    padding-bottom: 5px;
+}
+#forumalgemeen ul ul li {
+    font-family: arial;
+    padding: 2px 0px 2px 0px; 
+}
+#forumalgemeen ul ul li:hover {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* forum thread */
+/* de recente posts zijn een flexbox om de postnaam 
+en de tekst naast elkaar te krijgen */
+.post {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.post p:nth-child(2) {
+    font-size: 10px;
+}
+.post p:first-child:hover {
+    text-decoration: underline;
+}
+
+
+
+/* forum categorie - rekenen, algemeen, vragen pagina */
+/* top right bottom left, border-width */ 
+.forumcategorie {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: wheat;
+    width: 70%;
+    margin: 50px auto 50px auto;
+    height: 100%;
+    display: block;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    }
+.forum-thread-overzicht {
+height: 100%;
+border: 3px solid black;
+margin: 0 auto;
+margin: 0 10px 10px 0px;
+}
+.forum-thread-overzicht h2 { 
+    padding: 5px 10px 5px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.forum-thread-overzicht ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.forum-thread-overzicht ul li {
+    border: solid black;
+    border-width: 2px 0px 0px 0px;
+    padding: 5px 10px 5px 10px;
+}
+.forum-thread-overzicht ul li a {
+    font-family: Arial;
+}
+.forum-thread-overzicht ul li p { 
+    font-family: arial;
+    font-size: 10px;
+    padding-right: 10px;   
+}
+.forum-thread-overzicht-informatie {
+    display: flex;
+    flex-direction: row; 
+}
+.forum-thread-overzicht ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+
+/* forum thread.  */
 .forumthreadall {
     display: block;
     background-color: rgba(0,0,0,0.4);

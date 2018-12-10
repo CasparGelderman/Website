@@ -360,8 +360,14 @@ padding-bottom: 20px;
 #overons img {
     margin: 5px;
 }
+/* forum thread overzicht met categorie (rekenen, vragen, algemeen etc */
+.forum-thread-overzicht {
+    background-color: rgba(0, 0, 0, 0.3);
+height: 100%;
 
-/* forum posts */
+}
+
+/* forum thread */
 .forumthreadall {
     display: block;
     background-color: rgba(0,0,0,0.4);

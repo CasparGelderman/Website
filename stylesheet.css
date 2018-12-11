@@ -131,29 +131,29 @@ padding-bottom:10px;
 .searchbar input {
     width: 250px;
     height: 25px;
+    font-family: Arial;
 }
 .searchbar h3 {
     color: wheat;
     font-size: 15px;
 }
- /* footer */
 
+ /* footer */
 footer {
-    bottom: 0;
     width: 100%;
     color: wheat; 
     background-color: rgba(0,0,0, 0.4);
     text-align: center;
-    font-size: 11px;
+    font-size: 10px;
     height: 20px;
 }
 footer p {
     font-family: "Arial";
+    padding-top: 5px;
 }
 
 
 /*Homepage*/
-
 main {
     margin: 2em;
 }
@@ -211,50 +211,32 @@ section p {
 
 /* Inlogscherm en registerscherm */
 
-#register {
-    height: 390px;
-    background-color: rgba(0,0,0,0.4);
-    margin-bottom: 20px;
-}
-#inloggen {
-    height: 270px;
-    padding-bottom: 20px;
-    background-color:rgba(0,0,0,0.4);
-}
-#berichtplaatsen {
-    height:  410px;
-padding-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-
-#inloggen main, #register main, #berichtplaatsen main{ 
-    width: 400px;
-    margin: 0px auto;
-    margin-top: 150px;
+#inloggen , #register, #berichtplaatsen{ 
+    width: 100%;
+    margin: 150px auto 35px auto;
     text-align: center;
-    font-family: Arial;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 35px 0px 40px 0px;
 }
-#inloggen main  h2, #register main h2, #berichtplaatsen main h2{
+#inloggen h2, #register h2, #berichtplaatsen h2{
     color: wheat;
-    padding-top: 10px;
-
+    padding: 5px;
 }
-#inloggen main form, #register main form, #berichtplaatsen main form {
+#inloggen form, #register form, #berichtplaatsen form {
     color: wheat;
-    height: 40px;
+    height: 100%;
     width: 300px;
-    padding-top: 20px;
     margin: 0px auto;
 
 }
-#inloggen main form input, #register main form input, #berichtplaatsen main form input {
+#inloggen form input, #register form input, #berichtplaatsen form input {
     font-family: "Arial";
     width: 250px;
-    height: 40px; 
+    height: 30px; 
 }
 
-#inloggen main form label, #register main form label, #berichtplaatsen main form label {
+#inloggen form label, #register form label, #berichtplaatsen form label {
     font-family: "Arial";
 }
 
@@ -518,7 +500,6 @@ padding: 5px 10px 5px 10px;
 }
     header h2 {
         padding-top: 20px;
-   
         font-size: 22px;
     }
     header img {
@@ -549,8 +530,8 @@ background-color: rgba(20, 20, 20, 1);
 }
 
 /* register en inlog pagina voor mobile */
-#inloggen main, #register main, #berichtplaatsen main{ 
-    margin-top: 10px;
+#inloggen , #register , #berichtplaatsen { 
+    margin-top: 35px;
     width: 100%
 }
 /* search bar voor het menu */

@@ -10,7 +10,6 @@
 
 body {
     background-image: url("afbeeldingen/Blackboard.png");
-    position: relative;
 }
  article {
      display: flex;

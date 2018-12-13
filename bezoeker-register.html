@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8">
   <title>Leer rekenen</title>
@@ -36,12 +35,6 @@
       </li>
       <li>
         <a href="forum.html">Forum</a>
-        <ul class="submenu">
-          <li>
-            <a href="forum-bericht-plaatsen.html">Schrijf een bijdrage</a>
-          </li>
-
-        </ul>
       </li>
       <li>
         <a href="over-ons.html">Over ons</a>
@@ -65,14 +58,14 @@
   <main id="register">
     <h2>Register</h2>
     <form method="POST">
-      <label>E-mail address</label>
-      <input type="text" name="emailaddress" placeholder="E-mail address"><br> <br>
+      <label for="email">E-mail address</label>
+      <input type="text" name="emailaddress" id="email" placeholder="E-mail address"><br> <br>
 
-      <label> Wachtwoord </label>
-      <input type="password" name="wachtwoord" placeholder="Wachtwoord"><br>
+      <label for="wachtwoord"> Wachtwoord </label>
+      <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord"><br>
 
-      <label> Herhaal wachtwoord </label>
-      <input type="password" name="wachtwoord" placeholder="Herhaal wachtwoord"><br><br>
+      <label for="herhaalwachtwoord"> Herhaal wachtwoord </label>
+      <input type="password" id="herhaalwachtwoord" name="wachtwoord" placeholder="Herhaal wachtwoord"><br><br>
 
       <input type="submit" name="Registreren" value="Registreren">
     </form>

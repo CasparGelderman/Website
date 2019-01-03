@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Leer rekenen</title>
-  <link rel="icon" type="image/ico" href="../afbeeldingen/logo.png" />
-  <link rel="stylesheet" href="stylesheet.css">
-</head>
+<?php 
+require_once 'php.php';
+echo genereerHead();
+?>
 
 <body>
 <?php 
-include 'functions\header.html';
+include 'pagina-elementen\header.html';
     ?>
 <?php 
-include 'functions\mainnavigatie.html';
+include 'pagina-elementen\mainnavigatie.html';
 ?>
 
   <!-- inlog scherm -->
@@ -27,7 +22,7 @@ include 'functions\mainnavigatie.html';
   </main>
 
   <?php 
-include 'functions\footer.html'
+include 'pagina-elementen\footer.html'
 ?>
 
 </body>

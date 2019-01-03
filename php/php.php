@@ -4,7 +4,7 @@
 
 $config = ['websitenaam'=>'LeerRekenen', 'taal'=>'nl'];
 
-function genereerHead() { 
+function genereeerHead() { 
 global $config;
 
 $html = <<<HEADER
@@ -13,8 +13,6 @@ $html = <<<HEADER
 <head> 
   <meta charset="UTF-8">
   <title> $config[websitenaam] </title>
-  <link rel="icon" type="image/ico" href="afbeeldingen/logo.png" />
-  <link rel="stylesheet" href="stylesheet.css">
 </head>
 HEADER;
 

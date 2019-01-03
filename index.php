@@ -1,10 +1,9 @@
 <?php 
 require_once 'php.php';
 echo genereerHead();
-
 ?>
 
-<!-- <!DOCTYPE html>
+ <!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,7 +12,7 @@ echo genereerHead();
     <title>Leer rekenen</title>
     <link rel="icon" type="image/ico" href="afbeeldingen/logo.png" />
     <link rel="stylesheet" href="stylesheet.css">
-</head> -->
+</head>  -->
 
 <body>
     <?php 

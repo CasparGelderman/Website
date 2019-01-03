@@ -17,10 +17,10 @@ echo genereerHead();
 
 <body>
     <?php 
-include 'functions\header.html';
+include 'pagina-elementen\header.html';
     ?>
 <?php 
-include 'functions\mainnavigatie.html';
+include 'pagina-elementen\mainnavigatie.html';
 ?>
 
     <main>
@@ -79,7 +79,7 @@ include 'functions\mainnavigatie.html';
         </article>
     </main>
 <?php 
-include 'functions\footer.html'
+include 'pagina-elementen\footer.html'
 ?>
 
 </body>

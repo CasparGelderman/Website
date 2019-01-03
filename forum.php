@@ -10,10 +10,10 @@
 
 <body>
 <?php 
-include 'functions\header.html';
+include 'pagina-elementen\header.html';
     ?>
 <?php 
-include 'functions\mainnavigatie.html';
+include 'pagina-elementen\mainnavigatie.html';
 ?>
 
     <!-- Forum -->
@@ -123,7 +123,7 @@ include 'functions\mainnavigatie.html';
 
 
     <?php 
-include 'functions\footer.html'
+include 'pagina-elementen\footer.html'
 ?>
 
 </body>

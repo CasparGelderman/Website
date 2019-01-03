@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Leer rekenen</title>
-  <link rel="icon" type="image/ico" href="afbeeldingen/logo.png" />
+  <link rel="icon" type="image/ico" href="../afbeeldingen/logo.png" />
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 

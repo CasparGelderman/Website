@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php 
+require_once 'php.php';
+echo genereerHead();
+
+?>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,15 +13,14 @@
     <title>Leer rekenen</title>
     <link rel="icon" type="image/ico" href="afbeeldingen/logo.png" />
     <link rel="stylesheet" href="stylesheet.css">
-</head>
+</head> -->
 
 <body>
-    <header>
-        <img class="logo" src="afbeeldingen/logo.png" alt="LOGO">
-        <h2>Leerrekenen.nl</h2>
-    </header>
+    <?php 
+include 'functions\header.html';
+    ?>
 <?php 
-include 'functions\mainnavigatie.html'
+include 'functions\mainnavigatie.html';
 ?>
 
     <main>

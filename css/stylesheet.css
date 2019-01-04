@@ -9,7 +9,7 @@
 /* algemeen */
 
 body {
-    background-image: url("afbeeldingen/Blackboard.png");
+    background-image: url("../afbeeldingen/Blackboard.png");
 }
  article {
      display: flex;

@@ -1,6 +1,6 @@
 <?php 
-require_once 'php.php';
-echo genereerHead();
+session_start();
+include 'pagina-elementen\head.html';
 ?>
 
 <body>
@@ -14,7 +14,7 @@ include 'pagina-elementen\mainnavigatie.html';
   <!-- inlog scherm -->
   <main id="inloggen">
     <h2>Inloggen</h2>
-    <form method="POST">
+    <form method="POST" action="php.php">
       <input type="text" name="emailaddress" placeholder="E-mail address"><br> <br>
       <input type="password" name="wachtwoord" placeholder="Wachtwoord"><br> <br>
       <input type="submit" name="log in" value="log in">
@@ -24,6 +24,8 @@ include 'pagina-elementen\mainnavigatie.html';
   <?php 
 include 'pagina-elementen\footer.html'
 ?>
+
+
 
 </body>
 

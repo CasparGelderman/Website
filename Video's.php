@@ -1,8 +1,7 @@
 <?php 
-require_once 'php.php';
-echo genereerHead();
+session_start();
+include 'pagina-elementen\head.html';
 ?>
-
 <body>
 <?php 
 include 'pagina-elementen\header.html';

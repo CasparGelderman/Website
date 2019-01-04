@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Leer rekenen</title>
-    <link rel="icon" type="image/ico" href="afbeeldingen/logo.png" />
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
+<?php 
+session_start();
+include 'pagina-elementen\head.html';
+?>
 
 <body>
 <?php 

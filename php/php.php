@@ -19,7 +19,5 @@ $html = <<<HEADER
 HEADER;
 
 return $html;
-
 }
-
 ?>

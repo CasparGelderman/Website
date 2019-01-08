@@ -15,7 +15,7 @@ include 'pagina-elementen\mainnavigatie.html';
   <main id="inloggen">
     <h2>Inloggen</h2>
     <form method="POST" action="logged-in.php">
-      <input type="text" name="emailaddress" placeholder="E-mail address"><br> <br>
+      <input type="text" name="accountnaam" placeholder="Account naam"><br> <br>
       <input type="password" name="wachtwoord" placeholder="Wachtwoord"><br> <br>
       <input type="submit" name="login" value="login">
     </form>

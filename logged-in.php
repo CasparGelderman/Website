@@ -13,7 +13,9 @@ include 'pagina-elementen\mainnavigatie.html';
 
   <!-- inlog scherm -->
   <main id="inloggen">
-    <h2>Welcome, <?php var_dump($_POST) ?> </h2>
+    <h2>Welcome, <?php
+    
+    echo $_POST['accountnaam'] ?> </h2>
    
   </main>
 

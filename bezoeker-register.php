@@ -13,16 +13,19 @@ include 'pagina-elementen\mainnavigatie.html';
   <!-- register scherm -->
 
   <main id="register">
-    <h2>Register</h2>
+    <h2>Registreren</h2>
     <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-      <label for="email">E-mail address</label>
-      <input type="text" name="emailaddress" id="email" placeholder="E-mail address"><br> <br>
+<br>
+    <label for="accountnaam"> Account naam*</label>
+    <input type="text" name="accountname" id="accountname" placeholder="Account name"> <br> <br> 
 
-      <label for="wachtwoord"> Wachtwoord </label> 
-      <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord"><br>
+      <label for="naam">Naam*</label> <br>
+      <input type="text" name="naam" id="naam" placeholder="Naam"><br> <br> 
 
-      <label for="herhaalwachtwoord"> Herhaal wachtwoord </label>
-      <input type="password" id="herhaalwachtwoord" name="wachtwoord" placeholder="Herhaal wachtwoord"><br><br>
+      <label for="wachtwoord"> Wachtwoord* </label> 
+      <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord"><br> <br>
+      <label for="herhaalwachtwoord"> Herhaal wachtwoord* </label>
+      <input type="password" id="herhaalwachtwoord" name="wachtwoord" placeholder="Herhaal wachtwoord"><br><br> <br>
 
       <input type="submit" name="Registreren" value="Registreren">
     </form>

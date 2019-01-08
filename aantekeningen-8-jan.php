@@ -12,7 +12,9 @@ echo '<pre>';
 print_r(PDO::getAvailableDrivers());
 echo '</pre>'
 
+/* vergeet niet ConnectionPooling=0; anders werkt de database connectie niet */
 ?>
+
 
 
 </body>

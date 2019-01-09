@@ -6,10 +6,14 @@ $wachtwoord = $_POST['wachtwoord'];
 
 
 
-if (empty($accountnaam)) {
-header('location: http://localhost/index.php');
+if (empty($_POST['accountnaam'])) {
+echo 'Pleae fill in your accountname in order to log in. ';
 } else {
-  header('location: http://localhost/logged-in.php');
-
+  echo 'set';
 }
-?>
+
+if (empty($_POST['wachtwoord'])) {
+  echo 'Pleae fill in your password in order to log in. ';
+  } else {
+    echo 'set';
+  }

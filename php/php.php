@@ -17,3 +17,16 @@ if (empty($_POST['wachtwoord'])) {
   } else {
     echo 'set';
   }
+
+
+  $servername = "localhost";
+  $username = "username";
+  $password = "password";
+  $databasename = "websiteDatabase";
+
+
+  try {
+    $conn = new PDO
+  }
+
+

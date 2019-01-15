@@ -40,7 +40,7 @@ echo $error;
   //   }
 
   //   if ($user) ) {
-  //     assword_verify($password, $databasepassword)
+  //     password_verify($password, $databasepassword)
   //    // get logged in, session start
 
   //   } else { 
@@ -70,21 +70,22 @@ echo $error;
 // }
 
 
-// function DataBaseConnectie () { 
-// $host = 'localhost';
-// $db = 'LeerRekenenDatabase';
-// $user = 'user';
-// $pass = 'pass';
+function DataBaseConnectie () { 
+$host = 'localhost';
+$db = 'LeerRekenenDatabase';
+$user = 'user';
+$pass = 'pass';
+$charset = 'utf8mb4';
 
 
-//   try { 
-// $dbo = new PDO("mysql:host=$host;dbname=$db"; $user, $pass);
+  try { 
+$dbo = new PDO("mysql:host=$host;dbname=$db;charset=$charset"; $user, $pass);
 
-//   } catch (PDOException $e) {
-//     print "Error!: " $e->getMessage() . "<br/>";
-//     die();
-//   }
-// }
+  } catch (PDOException $e) {
+    print "Error!: " $e->getMessage() . "<br/>";
+    die();
+  }
+}
 
 
 

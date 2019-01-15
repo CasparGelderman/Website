@@ -10,25 +10,28 @@ $wachtwoord = $_POST['wachtwoord'];
 
   function LogInAccountnaam ($accountnaam) {
 if (empty($accountnaam)) {
-  $error = 'Accountnaam ontbreekt.  ';
-echo '$error';
+  $error = 'Accountnaam ontbreekt.';
+echo $error;
 } else { 
+
   $accountnaam = trim($accountnaam);
   $accountnaam = htmlspecialchars($accountnaam);
-  echo '$accountnaam';
+  echo $accountnaam;
+}  
 }
+
+  logInAccountnaam($accountnaam);
+
+  function LogInWachtwoord ($wachtwoord) {
+    if(empty($wachtwoord)) {
+      $error = "Wachtwoord ontbreekt.";
+      echo $error;
+    } else {
+      $wachtwoord = trim($wachtwoord);
+      $wachtwoord = password_hash($wachtwoord, PASSWORD_BCRYPT);
+  echo $wachtwoord;
   }
-
-
-  // function LogInWachtwoord ($wachtwoord) {
-  //   if(empty($wachtwoord)) {
-  //     $error = "Wachtwoord ontbreekt.";
-
-  //   } else {
-  //     $wachtwoord = trim($wachtwoord);
-  //     $wachtwoord = htmlspecialchars($wachtwoord);
-  //     $wachtwoord = password_hash($password);
-
+}
   //     $stmt = $pdo-> prepare("select * FROM accounts WHERE wachtwoord = ?")
   //     $stmt-> execute($wachtwoord);
   //     $user = $stmt->fetch();
@@ -43,6 +46,8 @@ echo '$error';
   //   }
   
   // }
+
+  LogInWachtwoord($wachtwoord);
 
 
 

@@ -1,16 +1,15 @@
 <?php 
 session_start();
-include 'pagina-elementen\head.html';
+include 'includes\head.html';
 ?>
 
 <body>
 <?php 
-include 'pagina-elementen\header.html';
+include 'includes\header.html';
     ?>
 <?php 
-include 'pagina-elementen\mainnavigatie.html';
+include 'includes\mainnavigatie.html';
 ?>
-
   <!-- inlog scherm -->
   <main id="inloggen">
     <h2>Welcome, <?php
@@ -20,7 +19,7 @@ include 'pagina-elementen\mainnavigatie.html';
   </main>
 
   <?php 
-include 'pagina-elementen\footer.html'
+include 'includes\footer.html'
 ?>
 
 

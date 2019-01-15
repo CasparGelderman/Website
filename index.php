@@ -1,14 +1,14 @@
 <?php 
 session_start();
-include 'pagina-elementen\head.html';
+include 'includes\head.html';
 ?>
 
 <body>
-    <?php 
-include 'pagina-elementen\header.html';
+<?php 
+include 'includes\header.html';
     ?>
 <?php 
-include 'pagina-elementen\mainnavigatie.html';
+include 'includes\mainnavigatie.html';
 ?>
 
     <main>
@@ -66,8 +66,9 @@ include 'pagina-elementen\mainnavigatie.html';
             </iframe>
         </article>
     </main>
-<?php 
-include 'pagina-elementen\footer.html'
+
+    <?php 
+include 'includes\footer.html'
 ?>
 
 </body>

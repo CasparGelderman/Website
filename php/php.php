@@ -28,7 +28,9 @@ echo $error;
       echo $error;
     } else {
       $wachtwoord = trim($wachtwoord);
+      $wachtwoord = htmlspecialchars($wachtwoord);
       $wachtwoord = password_hash($wachtwoord, PASSWORD_BCRYPT);
+
   echo $wachtwoord;
   }
 }

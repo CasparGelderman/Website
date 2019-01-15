@@ -1,41 +1,85 @@
 
 <?php 
-
+$accountnaam = $wachtwoord = $registerAccountNaam = $error = "";
+$RegisterWachtwoord = "";
 $accountnaam = $_POST['accountnaam']; 
 $wachtwoord = $_POST['wachtwoord'];
 
-$error='';
 
-if (empty($_POST['accountnaam'])) {
-echo 'Pleae fill in your accountname in order to log in. ';
-header('location: http://localhost/bezoeker-login.php');
-} else {
-  echo 'set';
+
+
+  function LogInAccountnaam ($accountnaam) {
+if (empty($accountnaam)) {
+  $error = 'Accountnaam ontbreekt.  ';
+echo '$error';
+} else { 
+  $accountnaam = trim($accountnaam);
+  $accountnaam = htmlspecialchars($accountnaam);
+  echo '$accountnaam';
 }
-
-if (empty($_POST['wachtwoord'])) {
-  echo 'Pleae fill in your password in order to log in. ';
-  header('location: http://localhost/bezoeker-login.php');
-  } else {
-    echo 'set';
   }
 
 
+  // function LogInWachtwoord ($wachtwoord) {
+  //   if(empty($wachtwoord)) {
+  //     $error = "Wachtwoord ontbreekt.";
 
+  //   } else {
+  //     $wachtwoord = trim($wachtwoord);
+  //     $wachtwoord = htmlspecialchars($wachtwoord);
+  //     $wachtwoord = password_hash($password);
 
-  // $servername = "localhost";
-  // $username = "username";
-  // $password = "password";
-  // $databasename = "websiteDatabase";
+  //     $stmt = $pdo-> prepare("select * FROM accounts WHERE wachtwoord = ?")
+  //     $stmt-> execute($wachtwoord);
+  //     $user = $stmt->fetch();
+  //   }
 
+  //   if ($user) ) {
+  //     assword_verify($password, $databasepassword)
+  //    // get logged in, session start
 
-  // try {
-  //   $conn = new PDO
+  //   } else { 
+  //     $error = 'Verkeerd wachtwoord.';
+  //   }
+  
   // }
 
 
-return $html;
 
-}
+
+
+// function registerAccountNaam ($RegisterAccountNaam) {
+// if (!preg_match('/^[a-zA-Z0-9\s]+$/', $accountnaam)) {
+//     $error = 'Het accountnaam kan alleen letters, nummers en spaties bevatten.' 
+// } else { 
+
+// }
+// }
+
+// function registerWachtwoord ($RegisterWachtwoord) {
+//   if (strlen($RegisterWachtwoord) < 8) {
+//     $error = 'Het wachtwoord moet langer zijn.'
+//   } 
+// }
+
+
+// function DataBaseConnectie () { 
+// $host = 'localhost';
+// $db = 'LeerRekenenDatabase';
+// $user = 'user';
+// $pass = 'pass';
+
+
+//   try { 
+// $dbo = new PDO("mysql:host=$host;dbname=$db"; $user, $pass);
+
+//   } catch (PDOException $e) {
+//     print "Error!: " $e->getMessage() . "<br/>";
+//     die();
+//   }
+// }
+
+
+
 
 ?>

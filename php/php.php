@@ -18,6 +18,11 @@ echo $error;
   $accountnaam = htmlspecialchars($accountnaam);
   echo $accountnaam;
 }  
+
+$sql = "SELECT * from Accounts where naam = ?";
+$stmt $pdo->prepare('SELECT * FROM Accounts WHERE name = ?');
+$stmt -> execute ([$accountnaam]);
+$user = $stmt->fetch();
 }
 
   logInAccountnaam($accountnaam);
@@ -71,11 +76,11 @@ echo $error;
 
 
 function DataBaseConnectie () { 
-$host = 'localhost';
-$db = 'LeerRekenenDatabase';
-$user = 'user';
-$pass = 'pass';
-$charset = 'utf8mb4';
+$host = "localhost";
+$db = "LeerRekenenDatabase";
+$user = "root";
+$pass = "";
+$charset = "utf8mb4";
 
 
   try { 

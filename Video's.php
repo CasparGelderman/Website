@@ -19,6 +19,8 @@ include 'includes\mainnavigatie.html';
         <div id="searchbar">
             <input type="text" placeholder="Zoeken...">
         </div>
+
+        </section>
         <!-- <h3 id="OptellenAftrekken">Optellen en aftrekken</h3>
         <p> Rekenen begint altijd met het leren om op te tellen en af te trekken, en daarom hebben wij hieronder een
             aantal filmpjes voor jou om dit te leren!
@@ -54,13 +56,15 @@ include 'includes\mainnavigatie.html';
 
 
 <?php
+include_once 'functies/functies.php';
 
+$datavideos = readMoviesFromDatabase();
     foreach ($datavideos as $records) {
      $html = '   <section class="section-videos"> 
-        <h3 class="section-videos-h3">' . $records['title'] . '</h3>
+        <h3 class="section-videos-h3">' . $records['titel'] . '</h3>
             <iframe src=' . $records['link']. '>
             </iframe>
-            <p>'.  $records['poster'] .  $records['rubriek']  . $records['gepubliceeerd'] . '<p> 
+            <p>'.  $records['poster'] .  $records['rubriek']  . $records['gepubliceerd'] . '<p> 
             <br> 
             <p>' .  $records['samenvatting'] . '</p>
             </section> ';
@@ -68,28 +72,28 @@ include 'includes\mainnavigatie.html';
             echo $html;
     }
 
-//   ?>
+ ?>
      
-//         <iframe src="https://www.youtube.com/embed/1jt5uJrZvKc">
-//         </iframe>
-//         <iframe src="https://www.youtube.com/embed/RGOl1H5V51k">
-//         </iframe>
-//         <iframe src="https://www.youtube.com/embed/yNCySCqFzpg">
-//         </iframe>
-//     </article>'
-// }
+<!--          <iframe src="https://www.youtube.com/embed/1jt5uJrZvKc">
+         </iframe>
+         <iframe src="https://www.youtube.com/embed/RGOl1H5V51k">
+         </iframe>
+         <iframe src="https://www.youtube.com/embed/yNCySCqFzpg">
+         </iframe>
+     </article>'
+ }
 
-//     <article>
-//     <h3 id="Breuken">Breuken</h3>
-//         <iframe src="https://www.youtube.com/embed/X2Qsl9TVDZ0">
-//         </iframe>
-//         <iframe src="https://www.youtube.com/embed/1jt5uJrZvKc">
-//         </iframe>
-//         <iframe src="https://www.youtube.com/embed/RGOl1H5V51k">
-//         </iframe>
-//         <iframe src="https://www.youtube.com/embed/yNCySCqFzpg">
-//         </iframe>
-//     </article>
+     <article>
+   <h3 id="Breuken">Breuken</h3>
+         <iframe src="https://www.youtube.com/embed/X2Qsl9TVDZ0">
+         </iframe>
+       <iframe src="https://www.youtube.com/embed/1jt5uJrZvKc">
+         </iframe>
+         <iframe src="https://www.youtube.com/embed/RGOl1H5V51k">
+         </iframe>
+         <iframe src="https://www.youtube.com/embed/yNCySCqFzpg">
+         </iframe>
+     </article> -->
 
     <?php 
 include 'includes\footer.html'

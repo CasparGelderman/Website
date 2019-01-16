@@ -7,19 +7,20 @@ DatabaseConnectie();
 
 
 
-
-function readThumbsFromDatabase() {
+function readMoviesFromDatabase() {
   global $pdo;
   try {
       $stmt = $pdo->prepare("SELECT * FROM Videos");
       $stmt->execute();
-$datavideos = $query-> fetchAll(PDO::FETCH_ASSOC);
+      
+$datavideos = $stmt-> fetchAll(PDO::FETCH_ASSOC);
+
       return $datavideos;
   } catch (PDOException $e) {
       echo "Could not fetch movies, ".$e->getMessage();
   }
 }
-
+ 
 
 
 
@@ -39,4 +40,5 @@ function DatabaseConnectie () {
       } catch (PDOException $e) {
   echo $e->GetMessage();
       }
+    }
   

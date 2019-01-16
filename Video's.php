@@ -12,6 +12,7 @@ include 'includes\mainnavigatie.html';
 ?>
 
     <!-- videos -->
+
     <section>
         <h3> Zoek naar videos... </h3>
         <p> Niet gevonden wat je wilt? Zoek tussen onze video's! </p>
@@ -32,6 +33,8 @@ include 'includes\mainnavigatie.html';
         <iframe src="https://www.youtube.com/embed/qh8fRZc4EBw">
         </iframe>
     </article>
+
+    
     <section>
         <h3 id="Tafels">Tafels</h3>
         <p> Hieronder kun je een aantal filmpjes vinden om kennis te maken met tafels, en je kunt met deze filmpjes
@@ -48,14 +51,28 @@ include 'includes\mainnavigatie.html';
         <iframe src="https://www.youtube.com/embed/28xQEUeMZd4">
         </iframe>
     </article>
-    <section>
-        <h3 id="Breuken">Breuken</h3>
-        <p> Breuken zijn vrij lastig als je er snel naar kijkt, maar eigenlijk is het een stuk makkelijker dan het
-            lijkt! Dat zie je in deze filmpjes hieronder.
-        </p>
-    </section>
+
+
+<?php 
+for each ($datavideos as $records)
+{
+    for each ($datavideos where categorie = breuken) {
+        post video 
+    }
+    <h3 id="Breuken">Breuken</h3>
+        <iframe src="https://www.youtube.com/embed/X2Qsl9TVDZ0">
+        </iframe>
+        <iframe src="https://www.youtube.com/embed/1jt5uJrZvKc">
+        </iframe>
+        <iframe src="https://www.youtube.com/embed/RGOl1H5V51k">
+        </iframe>
+        <iframe src="https://www.youtube.com/embed/yNCySCqFzpg">
+        </iframe>
+    </article>'
+}
+
     <article>
-        <h5> a </h5>
+    <h3 id="Breuken">Breuken</h3>
         <iframe src="https://www.youtube.com/embed/X2Qsl9TVDZ0">
         </iframe>
         <iframe src="https://www.youtube.com/embed/1jt5uJrZvKc">

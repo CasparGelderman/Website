@@ -180,8 +180,8 @@ section p {
  iframe {
     margin: 2em;
     display: flex;
-    width: 420px;
-    height: 315px; 
+    width: 90%;
+    height: 90%; 
  }
 
 
@@ -272,17 +272,58 @@ section p {
 }
 
 /* videos pagina */ 
+.section-videos2 { 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 
+.section-videos { 
+    background: rgba(0, 0, 0, 0.4);
+   width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+height: 30%;
+}
 
-.sectionvideos { 
-    display: flex; 
-background: rgba(0, 0, 0, 0.4);
- color: red; 
+.section-videos iframe {
+    margin: 5px;
+    padding: 5px;
+    display: center;
+}
+.section-videos h3 { 
+    font-size: 16px;
+    padding-top: 5px; 
+    margin: 0px; 
+}
+.tekstvideos { 
+    margin: 5px; 
+    display: flex;  
+    flex-direction: row;
+    justify-content: flex-end; 
+    align-items: center;
+    margin-right: 20px;
+    color: #b2a182; /* donkere wheat */ 
+    font-size: 10px;
 }
 
 .section-videos p { 
-    font-size: 40px;
+    padding: 5px;
 }
+
+.samenvatting-videos { 
+    padding: 0px;
+    margin: 0px; 
+    display: center; 
+}
+
+
+
 
 
 /* forum overzicht.  */
@@ -577,6 +618,12 @@ width: 90%;
     }
 
 
+/* video pagina */
+.section-videos { 
+   width: 80%;
+ margin: auto;
+ margin-top: 10px;
+}
 
 }
 

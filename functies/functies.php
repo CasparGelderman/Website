@@ -41,8 +41,6 @@ global $pdo;
  
   }
 
-
-
 function DatabaseConnectie () { 
   global $pdo;
   $hostname = "localhost"; //Naam van de Server
@@ -59,4 +57,15 @@ function DatabaseConnectie () {
   echo $e->GetMessage();
       }
     }
+
+
+
+    // functies registeren
+    function Registreren () { 
+        
+    }
+
+
+
+
   

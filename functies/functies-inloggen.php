@@ -26,19 +26,24 @@ if (empty($accountnaam)) {
   $error = 'Accountnaam ontbreekt.';
 echo $error;
 } else { 
-$accountnaam = functionValidation($accountnaam);
+$accountnaam = inloggenValidation($accountnaam);
 
 $stmt $pdo->prepare('SELECT accountnaam FROM Accounts WHERE name = ?');
 $stmt -> execute ([$accountnaam]);
 $user = $stmt->fetch();
-if ( $user == $accountnaam )
+if ( $user == $accountnaam ) {
+
+}
+}
 
 
 if (empty($wachtwoord))
 $error = 'Wachtwoord ontbreekt.';
 echo $error;
 else { 
-  $wachtwoord = 
+  $wachtwoord = inloggenValidation($wachtwoord);
+  
+
 }
 }  
 

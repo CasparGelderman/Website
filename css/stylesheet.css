@@ -283,7 +283,7 @@ section p {
 .section-videos { 
     background: rgba(0, 0, 0, 0.4);
    width: 30%;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;

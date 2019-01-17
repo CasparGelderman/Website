@@ -14,7 +14,7 @@ include 'includes\mainnavigatie.html';
 
   <main id="register">
     <h2>Registreren</h2>
-    <form method="POST" action="php/php-form-sanitation&validation.php">
+    <form method="POST" action="functies/functies.php">
 <br>
     <label for="accountnaam"> Account naam*</label>
     <input type="text" name="accountnaam" id="accountnaam" maxlength="12" placeholder="Account name"> <br> <br> 

@@ -60,12 +60,5 @@ function DatabaseConnectie () {
 
 
 
-    // functies registeren
-    function Registreren () { 
-        
-    }
-
-
-
 
   

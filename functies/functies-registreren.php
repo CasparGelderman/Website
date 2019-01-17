@@ -5,16 +5,16 @@ include 'functies.php';
 $registernaam = $_POST['naam'];
 $registerwachtwoord = $_POST['wachtwoord'];
 $registeraccountnaam = $_POST['accountnaam'];
-$registerHerhaalWachtwoord = $_post['herhaalwachtwoord'];
+$registerherhaalwachtwoord = $_POST['herhaalwachtwoord'];
 
-echo $registernaam, $registerwachtwoord, $registeraccountnaam
 
-function Registreren ($registernaam, $registerwachtwoord, $registeraccountnaam, $registerherhaalwachtwoord) { 
+
+function Registreren ($registernaam, $registerwachtwoord, $registeraccountnaam) { 
   global $pdo;
 
 
   try {
-    $SQL = 'INSERT INTO Account(accountnaam, naam, wachtwoord) VALUES (:accountnaam, :naam, :wachtwoord)';
+    $SQL = 'INSERT INTO Accounts(accountnaam, naam, wachtwoord) VALUES (:accountnaam, :naam, :wachtwoord)';
    $query = $pdo->prepare($SQL);
    
    $query -> execute (array($registeraccountnaam, $registernaam, $registerwachtwoord));
@@ -24,5 +24,5 @@ echo "did something";
      }
 }
 
-registreren ($registernaam, $registerwachtwoord, $registeraccountnaam, $registerherhaalwachtwoord);
+registreren ($registernaam, $registerwachtwoord, $registeraccountnaam);
       

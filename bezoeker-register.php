@@ -14,14 +14,13 @@ include 'includes\mainnavigatie.html';
 
   <main id="register">
     <h2>Registreren</h2>
-    <form method="POST" action="functies/functies.php">
+    <form method="POST" action="functies/functies-registreren.php">
 <br>
     <label for="accountnaam"> Account naam*</label>
     <input type="text" name="accountnaam" id="accountnaam" maxlength="12" placeholder="Account name"> <br> <br> 
 
       <label for="naam">Naam*</label> <br>
       <input type="text" name="naam" id="naam" placeholder="Naam" maxlength="12"><br> <br> 
-
       <label for="wachtwoord"> Wachtwoord* </label> 
       <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord"><br> <br>
       <label for="herhaalwachtwoord"> Herhaal wachtwoord* </label>

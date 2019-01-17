@@ -36,25 +36,6 @@ include 'includes\mainnavigatie.html';
         </iframe>
     </article>
 
-    
-    <section>
-        <h3 id="Tafels">Tafels</h3>
-        <p> Hieronder kun je een aantal filmpjes vinden om kennis te maken met tafels, en je kunt met deze filmpjes
-            ook
-            nog eens oefenen!
-        </p>
-    </section>
-    <article>
-        <h5> a </h5>
-        <iframe src="https://www.youtube.com/embed/Fko4WKyu6NY">
-        </iframe>
-        <iframe src="https://www.youtube.com/embed/3QiCFhUjPL8">
-        </iframe>
-        <iframe src="https://www.youtube.com/embed/28xQEUeMZd4">
-        </iframe>
-    </article> -->
-
-
 <?php
 include_once 'functies/functies.php';
 
@@ -76,26 +57,6 @@ $datavideos = readMoviesFromDatabase();
 
  ?>
      
-<!--          <iframe src="https://www.youtube.com/embed/1jt5uJrZvKc">
-         </iframe>
-         <iframe src="https://www.youtube.com/embed/RGOl1H5V51k">
-         </iframe>
-         <iframe src="https://www.youtube.com/embed/yNCySCqFzpg">
-         </iframe>
-     </article>'
- }
-
-     <article>
-   <h3 id="Breuken">Breuken</h3>
-         <iframe src="https://www.youtube.com/embed/X2Qsl9TVDZ0">
-         </iframe>
-       <iframe src="https://www.youtube.com/embed/1jt5uJrZvKc">
-         </iframe>
-         <iframe src="https://www.youtube.com/embed/RGOl1H5V51k">
-         </iframe>
-         <iframe src="https://www.youtube.com/embed/yNCySCqFzpg">
-         </iframe>
-     </article> -->
 
     <?php 
 include 'includes\footer.html'

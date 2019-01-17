@@ -22,6 +22,24 @@ $datavideos = $stmt-> fetchAll(PDO::FETCH_ASSOC);
 }
  
 
+function readPostsFromDatabase() {
+    global $pdo;
+    try {
+        $stmt = $pdo->prepare("SELECT * FROM Posts");
+        $stmt->execute();
+        
+  $dataposts = $stmt-> fetchAll(PDO::FETCH_ASSOC);
+  
+        return $dataposts;
+    } catch (PDOException $e) {
+        echo "Could not fetch posts ".$e->getMessage();
+    }
+  }
+
+  function ReactiePlaatsen () {
+global $pdo; 
+ 
+  }
 
 
 

@@ -271,6 +271,19 @@ section p {
     margin: 5px;
 }
 
+/* videos pagina */ 
+
+
+.sectionvideos { 
+    display: flex; 
+background: rgba(0, 0, 0, 0.4);
+ color: red; 
+}
+
+.section-videos p { 
+    font-size: 40px;
+}
+
 
 /* forum overzicht.  */
 main#forumalgemeen {

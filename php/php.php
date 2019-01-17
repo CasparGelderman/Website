@@ -1,11 +1,11 @@
 
 <?php 
+databaseconnectie(); 
+
 $accountnaam = $wachtwoord = $registerAccountNaam = $error = "";
 $RegisterWachtwoord = "";
 $accountnaam = $_POST['accountnaam']; 
 $wachtwoord = $_POST['wachtwoord'];
-
-
 
 
   function LogInAccountnaam ($accountnaam) {
@@ -25,20 +25,26 @@ $stmt -> execute ([$accountnaam]);
 $user = $stmt->fetch();
 }
 
-  logInAccountnaam($accountnaam);
+
+
+function logInWachtwoordValidation ($wachtwoord) { 
+  $wachtwoord = trim($wachtwoord);
+  $wachtwoord = htmlspecialchars($wachtwoord);
+  $wachtwoord = password_hash($wachtwoord, PASSWORD_DEFAULT);
+}
+
 
   function LogInWachtwoord ($wachtwoord) {
     if(empty($wachtwoord)) {
       $error = "Wachtwoord ontbreekt.";
       echo $error;
     } else {
-      $wachtwoord = trim($wachtwoord);
-      $wachtwoord = htmlspecialchars($wachtwoord);
-      $wachtwoord = password_hash($wachtwoord, PASSWORD_DEFAULT);
-
+  logInWachtwoordValidation($wachtwoord);
   echo $wachtwoord;
   }
 }
+
+
   //     $stmt = $pdo-> prepare("select * FROM accounts WHERE wachtwoord = ?")
   //     $stmt-> execute($wachtwoord);
   //     $user = $stmt->fetch();

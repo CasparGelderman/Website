@@ -14,41 +14,35 @@ if (empty($accountnaam)) {
 echo $error;
 } else { 
 $accountnaam = inloggenValidation($accountnaam);
-} 
-if (empty($wachtwoord)) {
-$error = 'Wachtwoord ontbreekt.';
-echo $error;
-} else { 
-  $wachtwoord = inloggenValidation($wachtwoord);
-  $wachtwoord = hash('sha256', $wachtwoord);
+    if (empty($wachtwoord)) {
+    $error = 'Wachtwoord ontbreekt.';
+    echo $error;
+    } else { 
+    $wachtwoord = inloggenValidation($wachtwoord);
+    $wachtwoord = hash('sha256', $wachtwoord);
+         try { 
+        $sql = 'SELECT * FROM Accounts WHERE accountnaam = :user';
+        $query = $pdo -> prepare($sql);
+        $query -> execute ([':user'=>$accountnaam]);
+    
+        $data =  $query -> fetch(PDO::FETCH_ASSOC);
+
+    
+            if ($data['wachtwoord'] == $wachtwoord) {
+            echo 'works';
+            SESSION_START() ;
+            $_SESSION['accountnaam'] = $accountnaam;
+      
+            } else {
+            session_destroy();
+            }
+        } catch (PDOException $e) {
+        echo $e->GetMessage();
+      }
+  }
 }
+  } 
 
-
-// try {
-//   $SQL = 'INSERT INTO Accounts(accountnaam, naam, wachtwoord) VALUES (:accountnaam, :naam, :wachtwoord)';
-//  $query = $pdo->prepare($SQL);
- 
-//  $query -> execute (array($registeraccountnaam, $registernaam, $registerwachtwoord));
-
-try { 
-  $sql = 'SELECT * FROM Accounts WHERE accountnaam = :user';
-  $query = $pdo -> prepare($sql);
-  $query -> execute ([':user'=>$accountnaam]);
-
-$data =  $query -> fetch(PDO::FETCH_ASSOC);
-if ($data['wachtwoord'] == $wachtwoord) {
-  echo 'works';
-  SESSION_START() ;
-  $_SESSION['accountnaam'] = $accountnaam;
-  
-} else {
-  session_destroy();
-}
-} catch (PDOException $e) {
-  echo $e->GetMessage();
- }
-
-}
 
 inloggen($accountnaam, $wachtwoord);
 

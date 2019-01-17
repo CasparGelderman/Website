@@ -6,6 +6,13 @@ DatabaseConnectie();
 
 
 
+function inloggenValidation ($data) { 
+    $data = trim($data);
+    $data = htmlspecialchars($data);
+    return $data;
+    }
+  
+
 
 function readMoviesFromDatabase() {
   global $pdo;

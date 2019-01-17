@@ -10,38 +10,41 @@ $wachtwoord = $_POST['wachtwoord'];
 global $pdo;
 
 if (empty($accountnaam)) {
-  $error = 'Accountnaam ontbreekt.';
-echo $error;
+$GLOBALS['$error'] = 'Accountnaam ontbreekt.';
+echo $GLOBALS['$error'];
+header("Location: ../bezoeker-login.php");
 } else { 
-$accountnaam = inloggenValidation($accountnaam);
-    if (empty($wachtwoord)) {
-    $error = 'Wachtwoord ontbreekt.';
-    echo $error;
-    } else { 
-    $wachtwoord = inloggenValidation($wachtwoord);
-    $wachtwoord = hash('sha256', $wachtwoord);
-         try { 
-        $sql = 'SELECT * FROM Accounts WHERE accountnaam = :user';
-        $query = $pdo -> prepare($sql);
-        $query -> execute ([':user'=>$accountnaam]);
-    
-        $data =  $query -> fetch(PDO::FETCH_ASSOC);
-
-    
-            if ($data['wachtwoord'] == $wachtwoord) {
-            echo 'works';
-            SESSION_START() ;
-            $_SESSION['accountnaam'] = $accountnaam;
-      
-            } else {
-            session_destroy();
-            }
-        } catch (PDOException $e) {
-        echo $e->GetMessage();
+      if (empty($wachtwoord)) {
+      $GLOBALS['$error'] = 'Wachtwoord ontbreekt.';
+      echo $GLOBALS['$error'];
+      } else { 
+          if(!preg_match('/^[a-zA-Z]+$/', $accountnaam)) {
+          $error = 'Accountnaam of wachtwoord klopt niet';
+          echo $error;
+          } else  { 
+          $accountnaam = inloggenValidation($accountnaam);
+          $wachtwoord = inloggenValidation($wachtwoord);
+          $wachtwoord = hash('sha256', $wachtwoord);
+              try { 
+              $sql = 'SELECT * FROM Accounts WHERE accountnaam = :user';
+              $query = $pdo -> prepare($sql);
+              $query -> execute ([':user'=>$accountnaam]);
+              $data =  $query -> fetch(PDO::FETCH_ASSOC);
+                  if ($data['wachtwoord'] == $wachtwoord) {
+                  echo 'works';
+                  SESSION_START() ;
+                  $_SESSION['accountnaam'] = $accountnaam;
+                  } else {
+                  session_destroy();
+                  $GLOBALS['$error'] = 'Accountnaam of wachtwoord is niet goed.';
+                  }
+              } catch (PDOException $e) {
+              echo $e->GetMessage();
+              }
+          }
       }
-  }
 }
-  } 
+} 
 
 
 inloggen($accountnaam, $wachtwoord);

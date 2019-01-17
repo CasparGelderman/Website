@@ -10,52 +10,69 @@ $registerherhaalwachtwoord = $_POST['herhaalwachtwoord'];
 
 
 
+
 function Registreren ($registernaam, $registerwachtwoord, $registeraccountnaam, $registerherhaalwachtwoord) { 
   global $pdo;
 
 if (empty($registernaam)) {
   $error =  'Please enter a name';
-  header('../bezoeker-register.php');
-} else {
-  $registernaam = inloggenValidation($registernaam);
-  if (empty($registeraccountnaam)) {
-    $error =  'Please enter a name';
-    header('../bezoeker-register.php');
-  } else {
-    $registeraccountnaam = inloggenValidation($registeraccountnaam);
-    
-if (empty($registerwachtwoord)) {
-  $error = 'Please enter a password';
-  header('../bezoeker-register.php');
-} else { 
-  if ($registerherhaalwachtwoord == $registerwachtwoord) {
-    $registerwachtwoord = inloggenValidation($registerwachtwoord);
-    $registerwachtwoord = hash('sha256', $registerwachtwoord);
+ echo $error;
+    } else {
 
-  try {
-    $SQL = 'INSERT INTO Accounts(accountnaam, naam, wachtwoord) VALUES (:accountnaam, :naam, :wachtwoord)';
-   $query = $pdo->prepare($SQL);
-   
-   $query -> execute (array($registeraccountnaam, $registernaam, $registerwachtwoord));
-   echo ' - GELUKT - ';
+      
+      if (empty($registeraccountnaam)) {
+        $error =  'Please enter an account name';
+        echo $error;
+        } else {
 
-    } catch  (PDOException $e) {
-      echo $e->GetMessage();
-      $error = "Registreren gefaalt";
-      header('../bezoeker-register.php');
-     }
-  } else {
-    $error =  'Passwords don"t match';
-    header('../bezoeker-register.php');
-  }
-}
-  }
-}
+          
+            if (empty($registerwachtwoord)) {
+            $error = 'Please enter a password';
+            echo $error;
+            } else { 
+              
+                  
+                  if(!preg_match('/^[a-zA-Z]+$/', $registernaam)) {
+                  $error = 'Alleen letters zijn mogelijk in de naam';
+                  echo $error;
+                  } else  { 
 
+                      $registernaam = inloggenValidation($registernaam);
+                      if(!preg_match('/^[a-zA-Z]+$/', $registeraccountnaam)) {
+                      $error = 'Alleen letters zijn mogelijk in de accountnaam';
+                      echo $error;
+                      } else  { 
 
-}
+                            $registeraccountnaam = inloggenValidation($registeraccountnaam);
+                            if ($registerherhaalwachtwoord == $registerwachtwoord) {
+                            $registerwachtwoord = inloggenValidation($registerwachtwoord);
+                            $registerwachtwoord = hash('sha256', $registerwachtwoord);
 
-registreren ($registernaam, $registerwachtwoord, $registeraccountnaam, $registerherhaalwachtwoord);
+                                try {
+                                $SQL = 'INSERT INTO Accounts(accountnaam, naam, wachtwoord) VALUES (:accountnaam, :naam, :wachtwoord)';
+                                $query = $pdo->prepare($SQL);
+                                $query -> execute ( array($registeraccountnaam, $registernaam, $registerwachtwoord));
+                                echo ' - GELUKT - ';
+                                
+                                
+                                } catch  (PDOException $e) {
+                                echo $e->GetMessage();
+                                $error = "Registreren gefaalt";
+                                echo $error;
+                                }
+
+                            } else {
+                            $error =  'Passwords don"t match';
+                            echo $error ;
+                            }
+                      }
+                  }
+            }
+        }
+    }
+} 
+
+ registreren ($registernaam, $registerwachtwoord, $registeraccountnaam, $registerherhaalwachtwoord);
 
 
 

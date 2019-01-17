@@ -20,7 +20,8 @@ include 'includes\mainnavigatie.html';
             <input type="text" placeholder="Zoeken...">
         </div>
 
-        </section>
+    </section>
+
 <?php
 include_once 'functies/functies.php';
 
@@ -28,22 +29,21 @@ $datavideos = readMoviesFromDatabase();
     foreach ($datavideos as $records) {
      $html = '   
    
-     <article class="sectionvideos2">  
+
 
      <section class="section-videos"> 
         <h3>' . $records['titel'] . '</h3>
             <iframe src= "' . $records['link']. '">
             </iframe>
-            <br>
-            <p class="samenvatting-videos">' .  $records['samenvatting'] . '</p>
 
-            <div class="tekstvideos"> 
+        <p class="samenvatting-videos">' .  $records['samenvatting'] . '</p>
+
+        <div class="tekstvideos"> 
             <p>onderwerp: '.   $records['rubriek']  . ' </p> 
             <p>'.  $records['gepubliceerd'] . '<p> 
-            </div> 
+        </div>    
+     </section> 
 
-            </section> <br>
-            </article>
              ';
 
             echo $html;

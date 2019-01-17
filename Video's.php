@@ -29,8 +29,6 @@ $datavideos = readMoviesFromDatabase();
     foreach ($datavideos as $records) {
      $html = '   
    
-
-
      <section class="section-videos"> 
         <h3>' . $records['titel'] . '</h3>
             <iframe src= "' . $records['link']. '">
@@ -43,7 +41,7 @@ $datavideos = readMoviesFromDatabase();
             <p>'.  $records['gepubliceerd'] . '<p> 
         </div>    
      </section> 
-
+     
              ';
 
             echo $html;

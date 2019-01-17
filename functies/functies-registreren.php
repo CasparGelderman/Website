@@ -1,7 +1,7 @@
 <?php
 
 include 'functies.php';
- $registernaam = $registerwachtwoord = $registeraccountnaam = $registerherhaalwachtwoord = "";
+ $registernaam = $registerwachtwoord = $registeraccountnaam = $registerherhaalwachtwoord = $error =  "";
 
 $registernaam = $_POST['naam'];
 $registerwachtwoord = $_POST['wachtwoord'];
@@ -14,25 +14,26 @@ function Registreren ($registernaam, $registerwachtwoord, $registeraccountnaam, 
   global $pdo;
 
 if (empty($registernaam)) {
-  echo 'Please enter a name';
+  $error =  'Please enter a name';
 } else {
   $registernaam = inloggenValidation($registernaam);
 }
 
 if (empty($registeraccountnaam)) {
-  echo 'Please enter a name';
+  $error =  'Please enter a name';
 } else {
   $registeraccountnaam = inloggenValidation($registeraccountnaam);
 }
 
 if (empty($registerwachtwoord)) {
-  echo 'Please enter a password';
+  $error = 'Please enter a password';
 } else { 
   if ($registerherhaalwachtwoord == $registerwachtwoord) {
     $registerwachtwoord = inloggenValidation($registerwachtwoord);
     $registerwachtwoord = hash('sha256', $registerwachtwoord);
   } else {
-    echo 'Passwords don"t match';
+    $error =  'Passwords don"t match';
+    header('.../bezoeker-register.php');
   }
 }
 
@@ -41,9 +42,11 @@ if (empty($registerwachtwoord)) {
    $query = $pdo->prepare($SQL);
    
    $query -> execute (array($registeraccountnaam, $registernaam, $registerwachtwoord));
+   
 header('registered.php');
     } catch  (PDOException $e) {
       echo $e->GetMessage();
+      $error = "Registreren gefaalt";
      }
 }
 

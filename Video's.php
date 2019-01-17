@@ -64,9 +64,11 @@ $datavideos = readMoviesFromDatabase();
         <h3 class="section-videos-h3">' . $records['titel'] . '</h3>
             <iframe src=' . $records['link']. '>
             </iframe>
-            <p>'.  $records['poster'] .  $records['rubriek']  . $records['gepubliceerd'] . '<p> 
+            <p>'.  $records['poster'] . '</p> 
+            <p>' .   $records['rubriek']  . ' </p> 
+            <p>' .  $records['gepubliceerd'] . '<p> 
             <br> 
-            <p>' .  $records['samenvatting'] . '</p>
+            <p class="samenvatting">' .  $records['samenvatting'] . '</p>
             </section> ';
 
             echo $html;

@@ -12,7 +12,17 @@ include 'includes\header.html';
 
 ?>
 
-  
+    <section>
+
+        <form action="/action_page.php">
+            Titel:<br>
+            <input type="text" value="Titel" name="Titel"><br>
+            Schrijf hier iets!<br>
+            <textarea name="message" rows="10" cols="30">Ik heb moeite met..</textarea><br><br>
+            <input type="submit" value="Post!" name="post">
+        </form>
+
+    </section>
 
 <?php
 global $pdo;
@@ -41,23 +51,23 @@ if(isset($_POST['post'])) {
 ?>
 
 
-$dataposts = readPostsFromDatabaseAlgemeen();
+<?php
+include_once 'functies/functies.php';
+global $pdo;
+$dataposts = readPostsFromDatabase();
 foreach ($dataposts as $forumpost) {
     $html = '   
-    <div class="forumpost">
-    <div class="forumposthead">
-      <h3>Gepost door ' . $forumpost['accountnaam'] . ' </h3>
-      <h3> Gepost op ' . $forumpost['unixtijd']. '</h3>
-    </div>
-    <p>' . $forumpost['tekst'] . '</p>
-  </div>
+     <section class="section-forumAlgemeen"> 
+        <h3>' . $forumpost['titel'] . '</h3>
+        <p class="samenvatting-forumAlgemeen">' .  $forumpost['tekst'] . '</p>
+
+     </section> 
              ';
+
     echo $html;
 }
- ?>
 
-
-
+?>
 
 <?php
 include 'includes\footer.html'

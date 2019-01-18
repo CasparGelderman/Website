@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include 'includes\head.html';
 ?>
 
@@ -28,8 +28,7 @@ foreach ($dataposts as $forumpost) {
       <h3> Gepost op ' . $forumpost['unixtijd']. '</h3>
     </div>
     <p>' . $forumpost['tekst'] . '</p>
-  </div>
-             ';
+  </div>';
     echo $html;
 }
  ?>
@@ -41,3 +40,4 @@ foreach ($dataposts as $forumpost) {
 include 'includes\footer.html'
 ?>
 </body>
+</html>

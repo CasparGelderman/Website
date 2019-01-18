@@ -1,5 +1,5 @@
 <?php 
-session_destroy();
+
 include 'includes\head.html';
 ?>
 
@@ -15,6 +15,9 @@ require_once 'includes\mainnavigatie.php';
   <h2> U bent uitgelogd.  </h2>
   </main>
 
+  <?php 
+$_SESSION['accountnaam'] = "";
+  ?>
 
   <?php 
 include 'includes\footer.html'

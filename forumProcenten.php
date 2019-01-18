@@ -42,7 +42,7 @@ foreach ($dataposts as $forumpost) {
   </div>
              '; } 
     echo $html;
-}
+
  ?>
 
 

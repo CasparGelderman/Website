@@ -33,20 +33,20 @@ if (empty($registernaam)) {
             header("location: ../bezoeker-register.php");
             } else { 
               
-                if (strlen($registeraccountnaam) >= 15) {
-                $_SESSION['error'] = 'Accountnaam is te lang.';
-                header("Location: ../bezoeker-register.php");
-                } else {
+                // if (strlen($registeraccountnaam) >= 15) {
+                // $_SESSION['error'] = 'Accountnaam is te lang.';
+                // header("Location: ../bezoeker-register.php");
+                // } else {
                 
-                if (strlen($registernaam) >= 15) {
-                 $_SESSION['error'] = 'Naam is te lang.';
-                 header("Location: ../bezoeker-register.php");
-                 } else {
+                // if (strlen($registernaam) >= 15) {
+                //  $_SESSION['error'] = 'Naam is te lang.';
+                //  header("Location: ../bezoeker-register.php");
+                //  } else {
                 
-                if (strlen($registerwachtwoord) >= 200) {
-                $_SESSION['error'] = 'Wachtwoord is te lang.';
-                header("Location: ../bezoeker-register.php");
-                } else {
+                // if (strlen($registerwachtwoord) >= 200) {
+                // $_SESSION['error'] = 'Wachtwoord is te lang.';
+                // header("Location: ../bezoeker-register.php");
+                // } else {
                 
 
                   if(!preg_match('/^[a-zA-Z]+$/', $registernaam)) {
@@ -76,8 +76,8 @@ if (empty($registernaam)) {
                                 } catch  (PDOException $e) {
                                 echo $e->GetMessage();
                                 $_SESSION['error'] = "Accountnaam bestaat al.";
-                                echo $registeraccountnaam, $registernaam, $registerwachtwoord;
-                                // header("location: ../bezoeker-register.php");
+            
+                                 header("location: ../bezoeker-register.php");
                                 }
 
                             } else {
@@ -90,9 +90,9 @@ if (empty($registernaam)) {
         }
     }
 }
-        }
-   }
-}
+//         }
+//    }
+// }
 
  registreren ($registernaam, $registerwachtwoord, $registeraccountnaam, $registerherhaalwachtwoord);
 

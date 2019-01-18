@@ -51,8 +51,8 @@ function DatabaseConnectie () {
   global $pdo;
   $hostname = "localhost"; //Naam van de Server
   $dbname = "LeerRekenendatabase";    //Naam van de Database
-  $username = "";      //Inlognaam
-  $pw = "";      //Password
+  $username = "sa";      //Inlognaam
+  $pw = "01Glitterlove@";      //Password
   global $pdo;
   
       try { 

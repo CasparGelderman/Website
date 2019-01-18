@@ -7,19 +7,19 @@ function postPlaatsen() {
 global $pdo;
 
 
-$post_id = $pdo -> query('SELECT COUNT(post_id) FROM Posts');
-$result = $post_id->fetch();
-$newPost_id = $result[0];
+$oldpost_id = $pdo -> query('SELECT COUNT(post_id) FROM Posts');
+$result = $oldpost_id->fetch();
+$post_id = $result[0];
 
 
-
-$categorie = 'Algemeen';
+$titel = 'algemeen';
+$categorie = 'algemeen';
 $unixtijd = time();
 
 
 if(isset($_POST['post']))  {
-  $titel = $_GET['Titel'];
-  $tekst = $_GET['message'];
+
+  $tekst = $_POST['post'];
 
 
       if (!empty($_SESSION['accountnaam'])) {
@@ -28,7 +28,7 @@ if(isset($_POST['post']))  {
         try {
         $SQL = 'INSERT INTO Accounts(post_id, titel, tekst, accountnaam, categorie, unixtijd) VALUES (:post_id, :titel, :tekst, :accountnaam, :categorie, :unixtijd)';
         $query = $pdo->prepare($SQL);
-        $query->execute(array($newPost_id, $titel, $tekst, $accountnaam, $categorie, $unixtijd));
+        $query->execute(array($post_id, $titel, $tekst, $accountnaam, $categorie, $unixtijd));
 
         $_SESSION['error'] = 'Post succesvol gemaakt!';
 

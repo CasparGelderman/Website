@@ -11,15 +11,14 @@ include 'includes\header.html';
 require_once 'includes\mainnavigatie.php';
 ?>
 
-  
-
+ 
 
 <?php
 include_once 'functies/functies-forum.php';
 
 
 
-$dataposts = readPostsFromDatabaseAlgemeen();
+$dataposts = readPostsFromDatabaseBreuken();
 foreach ($dataposts as $forumpost) {
     $html = '   
     <div class="forumpost">

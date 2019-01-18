@@ -33,20 +33,20 @@ if (empty($registernaam)) {
             header("location: ../bezoeker-register.php");
             } else { 
               
-                // if (strlen($registeraccountnaam) >= 12) {
-                // $_SESSION['error'] = 'Accountnaam is te lang.';
-                // header("Location: ../bezoeker-register.php");
-                // } else {
+                if (strlen($registeraccountnaam) >= 15) {
+                $_SESSION['error'] = 'Accountnaam is te lang.';
+                header("Location: ../bezoeker-register.php");
+                } else {
                 
-                // if (strlen($registernaam) >= 12) {
-                //  $_SESSION['error'] = 'Naam is te lang.';
-                //  header("Location: ../bezoeker-register.php");
-                //  } else {
+                if (strlen($registernaam) >= 15) {
+                 $_SESSION['error'] = 'Naam is te lang.';
+                 header("Location: ../bezoeker-register.php");
+                 } else {
                 
-                // if (strlen($registerwachtwoord) >= 30) {
-                // $_SESSION['error'] = 'Wachtwoord is te lang.';
-                // header("Location: ../bezoeker-register.php");
-                // } else {
+                if (strlen($registerwachtwoord) >= 200) {
+                $_SESSION['error'] = 'Wachtwoord is te lang.';
+                header("Location: ../bezoeker-register.php");
+                } else {
                 
 
                   if(!preg_match('/^[a-zA-Z]+$/', $registernaam)) {
@@ -90,9 +90,9 @@ if (empty($registernaam)) {
         }
     }
 }
-       // }
-  //  }
-//}
+        }
+   }
+}
 
  registreren ($registernaam, $registerwachtwoord, $registeraccountnaam, $registerherhaalwachtwoord);
 

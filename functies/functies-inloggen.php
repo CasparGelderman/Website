@@ -25,35 +25,49 @@ header("Location: ../bezoeker-login.php");
             $_SESSION['error'] = 'Accountnaam of wachtwoord klopt niet';
             header("Location: ../bezoeker-login.php");
             } else  { 
-           
-            $accountnaam = inloggenValidation($accountnaam);
-            $wachtwoord = inloggenValidation($wachtwoord);
-            $wachtwoord = hash('sha256', $wachtwoord);
 
-                try { 
-                $sql = 'SELECT * FROM Accounts WHERE accountnaam = :user';
-                $query = $pdo -> prepare($sql);
-                $query -> execute ([':user'=>$accountnaam]);
-                $data =  $query -> fetch(PDO::FETCH_ASSOC);
-
-                    if ($data['wachtwoord'] == $wachtwoord) {
-                    echo 'works';
-                    SESSION_START() ;
-                    $_SESSION['accountnaam'] = $accountnaam;
-                    } else {
-                    session_destroy();
+                    if (strlen($accountnaam) >= 20) {
+                    $_SESSION['error'] = 'Accountnaam of wachtwoord klopt niet';
                     header("Location: ../bezoeker-login.php");
-                    $_SESSION['error'] = 'Accountnaam of wachtwoord is niet goed.';
+                    } else {
+
+                            if (strlen($wachtwoord) >= 20) {
+                            $_SESSION['error'] = 'Accountnaam of wachtwoord klopt niet';
+                            header("Location: ../bezoeker-login.php");
+                            } else {
+
+                                $accountnaam = inloggenValidation($accountnaam);
+                                $wachtwoord = inloggenValidation($wachtwoord);
+                                $wachtwoord = hash('sha256', $wachtwoord);
+
+                                try { 
+                                $sql = 'SELECT * FROM Accounts WHERE accountnaam = :user';
+                                $query = $pdo -> prepare($sql);
+                                $query -> execute ([':user'=>$accountnaam]);
+                                $data =  $query -> fetch(PDO::FETCH_ASSOC);
+
+                                     if ($data['wachtwoord'] == $wachtwoord && $data['accountnaam'] == $accountnaam ) {
+                                     echo 'works';
+                                    $_SESSION['accountnaam'] = $accountnaam;
+                                    $_SESSION['error']= 'Inloggen gelukt!';
+                                    header("Location: ../bezoeker-login.php");
+                                    } else {
+                                    header("Location: ../bezoeker-login.php");
+                                    $_SESSION['error'] = 'Accountnaam of wachtwoord is niet goed.';
+                                    }
+
+                                } catch (PDOException $e) {
+                                echo $e->GetMessage();
+                                }
+                            }
                     }
-
-                } catch (PDOException $e) {
-                echo $e->GetMessage();
-                }
-          }
-      }
+            }
+        }
+    }
 }
-} 
+
+ 
 
 
-inloggen($accountnaam, $wachtwoord);
+ inloggen($accountnaam, $wachtwoord);
 

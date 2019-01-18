@@ -29,11 +29,26 @@ if (empty($registernaam)) {
 
           
             if (empty($registerwachtwoord)) {
-                $_SESSION['error'] = 'Wachtwoord is verplicht.';
-                header("location: ../bezoeker-register.php");
+            $_SESSION['error'] = 'Wachtwoord is verplicht.';
+            header("location: ../bezoeker-register.php");
             } else { 
               
-                  
+                if (strlen($registeraccountnaam) >= 12) {
+                $_SESSION['error'] = 'Accountnaam is te lang.';
+                header("Location: ../bezoeker-register.php");
+                } else {
+                
+                if (strlen($registernaam) >= 12) {
+                 $_SESSION['error'] = 'Naam is te lang.';
+                 header("Location: ../bezoeker-register.php");
+                 } else {
+                
+                if (strlen($registerwachtwoord) >= 15) {
+                $_SESSION['error'] = 'Wachtwoord is te lang.';
+                header("Location: ../bezoeker-register.php");
+                } else {
+                
+
                   if(!preg_match('/^[a-zA-Z]+$/', $registernaam)) {
                     $_SESSION['error'] = 'Alleen letters zijn mogelijk in de naam';
                     header("location: ../bezoeker-register.php");
@@ -55,8 +70,8 @@ if (empty($registernaam)) {
                                 $SQL = 'INSERT INTO Accounts(accountnaam, naam, wachtwoord) VALUES (:accountnaam, :naam, :wachtwoord)';
                                 $query = $pdo->prepare($SQL);
                                 $query -> execute ( array($registeraccountnaam, $registernaam, $registerwachtwoord));
-                                
-                                
+                                $_SESSION['error'] = "Registreren gelukt! Log hier in.";     
+                                header("location: ../bezoeker-login.php");                       
                                 
                                 } catch  (PDOException $e) {
                                 echo $e->GetMessage();
@@ -73,7 +88,10 @@ if (empty($registernaam)) {
             }
         }
     }
-} 
+}
+        }
+    }
+}
 
  registreren ($registernaam, $registerwachtwoord, $registeraccountnaam, $registerherhaalwachtwoord);
 

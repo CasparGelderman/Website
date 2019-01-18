@@ -46,12 +46,12 @@ header("Location: ../bezoeker-login.php");
                                 $query -> execute ([':user'=>$accountnaam]);
                                 $data =  $query -> fetch(PDO::FETCH_ASSOC);
 
-                                     if ($data['wachtwoord'] == $wachtwoord) {
+                                     if ($data['wachtwoord'] == $wachtwoord && $data['accountnaam'] == $accountnaam ) {
                                      echo 'works';
-                                    SESSION_START() ;
                                     $_SESSION['accountnaam'] = $accountnaam;
+                                    $_SESSION['error']= 'Inloggen gelukt!';
+                                    header("Location: ../bezoeker-login.php");
                                     } else {
-                                    session_destroy();
                                     header("Location: ../bezoeker-login.php");
                                     $_SESSION['error'] = 'Accountnaam of wachtwoord is niet goed.';
                                     }

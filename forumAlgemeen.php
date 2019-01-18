@@ -31,9 +31,7 @@ foreach ($dataposts as $forumpost) {
              ';
     echo $html;
 
-    $post_id = $dbo->query('SELECT COUNT(post_id) FROM Posts');
-    $newPost_id = $post_id+1;
-}
+
  ?>
 
 

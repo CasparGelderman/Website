@@ -25,16 +25,16 @@
             <a href="forumAlgemeen.php">algemeen</a>
           </li>
           <li>
-            <a href="">bewerkingen</a>
+            <a href="forumBewerkingen.php">bewerkingen</a>
           </li>
           <li>
-            <a href="">tafels</a>
+            <a href="forumTafels.php">tafels</a>
           </li>
           <li>
-            <a href="">breuken</a>
+            <a href="forumBreuken.php">breuken</a>
           </li>
           <li>
-            <a href="">percentages</a>
+            <a href="forumProcenten.php">procenten</a>
           </li>
         </ul>
       </li>

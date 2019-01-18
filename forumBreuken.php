@@ -11,14 +11,14 @@ include 'includes\header.html';
 require_once 'includes\mainnavigatie.php';
 ?>
 
-  
+ 
 
 <?php
 include_once 'functies/functies-forum.php';
 
 
 
-$dataposts = readPostsFromDatabaseAlgemeen();
+$dataposts = readPostsFromDatabaseBreuken();
 foreach ($dataposts as $forumpost) {
     $html = '   
     <div class="forumpost">
@@ -30,9 +30,6 @@ foreach ($dataposts as $forumpost) {
   </div>
              ';
     echo $html;
-
-    $post_id = $dbo->query('SELECT COUNT(post_id) FROM Posts');
-    $newPost_id = $post_id+1;
 }
  ?>
 

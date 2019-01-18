@@ -1,5 +1,5 @@
 <?php 
-include 'functies.php';
+include 'functies.php'; // hier staat de functie inloggenValidation in 
 
 $accountnaam = $wachtwoord =  "";
 $accountnaam = $_POST['accountnaam']; 
@@ -8,39 +8,47 @@ $wachtwoord = $_POST['wachtwoord'];
 
   function Inloggen ($accountnaam, $wachtwoord) {
 global $pdo;
+session_start();
+$_SESSION['error'] = "";
 
 if (empty($accountnaam)) {
-$GLOBALS['$error'] = 'Accountnaam ontbreekt.';
-echo $GLOBALS['$error'];
+    $_SESSION['error'] = 'Accountnaam ontbreekt.';
 header("Location: ../bezoeker-login.php");
 } else { 
-      if (empty($wachtwoord)) {
-      $GLOBALS['$error'] = 'Wachtwoord ontbreekt.';
-      echo $GLOBALS['$error'];
-      } else { 
-          if(!preg_match('/^[a-zA-Z]+$/', $accountnaam)) {
-          $error = 'Accountnaam of wachtwoord klopt niet';
-          echo $error;
-          } else  { 
-          $accountnaam = inloggenValidation($accountnaam);
-          $wachtwoord = inloggenValidation($wachtwoord);
-          $wachtwoord = hash('sha256', $wachtwoord);
-              try { 
-              $sql = 'SELECT * FROM Accounts WHERE accountnaam = :user';
-              $query = $pdo -> prepare($sql);
-              $query -> execute ([':user'=>$accountnaam]);
-              $data =  $query -> fetch(PDO::FETCH_ASSOC);
-                  if ($data['wachtwoord'] == $wachtwoord) {
-                  echo 'works';
-                  SESSION_START() ;
-                  $_SESSION['accountnaam'] = $accountnaam;
-                  } else {
-                  session_destroy();
-                  $GLOBALS['$error'] = 'Accountnaam of wachtwoord is niet goed.';
-                  }
-              } catch (PDOException $e) {
-              echo $e->GetMessage();
-              }
+
+        if (empty($wachtwoord)) {
+        $_SESSION['error'] = 'Wachtwoord ontbreekt.';
+        header("Location: ../bezoeker-login.php");
+        } else { 
+
+            if(!preg_match('/^[a-zA-Z]+$/', $accountnaam)) {
+            $_SESSION['error'] = 'Accountnaam of wachtwoord klopt niet';
+            header("Location: ../bezoeker-login.php");
+            } else  { 
+           
+            $accountnaam = inloggenValidation($accountnaam);
+            $wachtwoord = inloggenValidation($wachtwoord);
+            $wachtwoord = hash('sha256', $wachtwoord);
+
+                try { 
+                $sql = 'SELECT * FROM Accounts WHERE accountnaam = :user';
+                $query = $pdo -> prepare($sql);
+                $query -> execute ([':user'=>$accountnaam]);
+                $data =  $query -> fetch(PDO::FETCH_ASSOC);
+
+                    if ($data['wachtwoord'] == $wachtwoord) {
+                    echo 'works';
+                    SESSION_START() ;
+                    $_SESSION['accountnaam'] = $accountnaam;
+                    } else {
+                    session_destroy();
+                    header("Location: ../bezoeker-login.php");
+                    $_SESSION['error'] = 'Accountnaam of wachtwoord is niet goed.';
+                    }
+
+                } catch (PDOException $e) {
+                echo $e->GetMessage();
+                }
           }
       }
 }

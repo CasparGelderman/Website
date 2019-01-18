@@ -13,8 +13,6 @@ function inloggenValidation ($data) {
     return $data;
     }
   
-
-
 function readMoviesFromDatabase() {
   global $pdo;
   try {

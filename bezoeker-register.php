@@ -14,7 +14,10 @@ include 'includes\mainnavigatie.html';
 
   <main id="register">
     <h2>Registreren</h2>
-    <span> <p> <?php echo $error ?> </span>
+    <p> <?php
+    if (!empty( $_SESSION['error'])) {
+    echo  $_SESSION['error'];
+    } ?> </p>
     <form method="POST" action="functies/functies-registreren.php">
 <br>
     <label for="accountnaam"> Account naam*</label>

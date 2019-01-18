@@ -15,9 +15,9 @@ include 'includes\mainnavigatie.html';
   <main id="inloggen">
     <h2>Inloggen</h2>
     <p> <?php
-    if (!empty($GLOBALS['$error'])) {
-    echo $GLOBALS['$error'];
-    } ?> </p>
+    if (!empty( $_SESSION['error'])) {
+    echo  $_SESSION['error'];
+    } ?> </p> <br>
     <form method="POST" action="functies/functies-inloggen.php">
       <input type="text" name="accountnaam" placeholder="Account naam"><br> <br>
       <input type="password" name="wachtwoord" placeholder="Wachtwoord"><br> <br>

@@ -13,37 +13,40 @@ $registerherhaalwachtwoord = $_POST['herhaalwachtwoord'];
 
 function Registreren ($registernaam, $registerwachtwoord, $registeraccountnaam, $registerherhaalwachtwoord) { 
   global $pdo;
+session_start();
+$_SESSION['error'] = "";
 
 if (empty($registernaam)) {
-  $error =  'Please enter a name';
- echo $error;
+ $_SESSION['error'] =  'Naam is verplicht.';
+ header("location: ../bezoeker-register.php");
     } else {
 
       
       if (empty($registeraccountnaam)) {
-        $error =  'Please enter an account name';
-        echo $error;
+        $_SESSION['error'] =  'Accountnaam is verplicht. ';
+        header("location: ../bezoeker-register.php");
         } else {
 
           
             if (empty($registerwachtwoord)) {
-            $error = 'Please enter a password';
-            echo $error;
+                $_SESSION['error'] = 'Wachtwoord is verplicht.';
+                header("location: ../bezoeker-register.php");
             } else { 
               
                   
                   if(!preg_match('/^[a-zA-Z]+$/', $registernaam)) {
-                  $error = 'Alleen letters zijn mogelijk in de naam';
-                  echo $error;
+                    $_SESSION['error'] = 'Alleen letters zijn mogelijk in de naam';
+                    header("location: ../bezoeker-register.php");
                   } else  { 
 
                       $registernaam = inloggenValidation($registernaam);
                       if(!preg_match('/^[a-zA-Z]+$/', $registeraccountnaam)) {
-                      $error = 'Alleen letters zijn mogelijk in de accountnaam';
-                      echo $error;
+                        $_SESSION['error'] = 'Alleen letters zijn mogelijk in de accountnaam';
+                        header("location: ../bezoeker-register.php");
                       } else  { 
 
                             $registeraccountnaam = inloggenValidation($registeraccountnaam);
+
                             if ($registerherhaalwachtwoord == $registerwachtwoord) {
                             $registerwachtwoord = inloggenValidation($registerwachtwoord);
                             $registerwachtwoord = hash('sha256', $registerwachtwoord);
@@ -52,18 +55,18 @@ if (empty($registernaam)) {
                                 $SQL = 'INSERT INTO Accounts(accountnaam, naam, wachtwoord) VALUES (:accountnaam, :naam, :wachtwoord)';
                                 $query = $pdo->prepare($SQL);
                                 $query -> execute ( array($registeraccountnaam, $registernaam, $registerwachtwoord));
-                                echo ' - GELUKT - ';
+                                
                                 
                                 
                                 } catch  (PDOException $e) {
                                 echo $e->GetMessage();
-                                $error = "Registreren gefaalt";
-                                echo $error;
+                                $_SESSION['error'] = "Accountnaam bestaat al.";
+                                header("location: ../bezoeker-register.php");
                                 }
 
                             } else {
-                            $error =  'Passwords don"t match';
-                            echo $error ;
+                                $_SESSION['error'] =  'Wachtwoorden komen niet overeen.';
+                                header("location: ../bezoeker-register.php");
                             }
                       }
                   }

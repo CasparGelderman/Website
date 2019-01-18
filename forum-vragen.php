@@ -1,14 +1,14 @@
 <?php 
 session_start();
-include 'pagina-elementen\head.html';
+include 'includes\head.html';
 ?>
 
 <body>
 <?php 
-include 'pagina-elementen\header.html';
+include 'includes\header.html';
     ?>
 <?php 
-include 'pagina-elementen\mainnavigatie.html';
+require_once 'includes\mainnavigatie.php';
 ?>
 
     <!-- forum vragen posts -->
@@ -66,8 +66,9 @@ include 'pagina-elementen\mainnavigatie.html';
         </div>
 
     </main>
+
     <?php 
-include 'pagina-elementen\footer.html'
+include 'includes\footer.html'
 ?>
 
 </body>

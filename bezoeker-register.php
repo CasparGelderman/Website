@@ -26,9 +26,9 @@ include 'includes\mainnavigatie.html';
       <label for="naam">Naam*</label> <br>
       <input type="text" name="naam" id="naam" placeholder="Naam" maxlength="12"><br> <br> 
       <label for="wachtwoord"> Wachtwoord* </label> 
-      <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord"><br> <br>
+      <input type="password" id="wachtwoord" name="wachtwoord" maxlength="15" placeholder="Wachtwoord"><br> <br>
       <label for="herhaalwachtwoord"> Herhaal wachtwoord* </label>
-      <input type="password" id="herhaalwachtwoord" name="herhaalwachtwoord" placeholder="Herhaal wachtwoord"><br><br> <br>
+      <input type="password" id="herhaalwachtwoord" name="herhaalwachtwoord" maxlength="15" placeholder="Herhaal wachtwoord"><br><br> <br>
 
       <input type="submit" name="Registreren" value="Registreren">
     </form>

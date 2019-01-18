@@ -19,8 +19,8 @@ include 'includes\mainnavigatie.html';
     echo  $_SESSION['error'];
     } ?> </p> <br>
     <form method="POST" action="functies/functies-inloggen.php">
-      <input type="text" name="accountnaam" placeholder="Account naam"><br> <br>
-      <input type="password" name="wachtwoord" placeholder="Wachtwoord"><br> <br>
+      <input type="text" name="accountnaam" maxlength="12" placeholder="Account naam"><br> <br>
+      <input type="password" name="wachtwoord" maxlength="15" placeholder="Wachtwoord"><br> <br>
       <input type="submit" name="login" value="login">
     </form>
   </main>

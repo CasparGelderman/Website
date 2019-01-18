@@ -23,17 +23,27 @@ include 'includes\mainnavigatie.html';
 
     </section>
 
+
 <?php
 include_once 'functies/functies.php';
 sqlsrv_connect ( LeerRekenenDatabase);
 
-if(isset($_POST['post']){
-    //insert script voor het tabel 'posts'
+if(isset($_POST['post'])) {
+    $sql = "INSERT INTO Posts
+VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $query = $pdo->prepare($sql);
 
-);
-}
+    if ($pdo->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $pdo->error;
+    }
+
+};
+
 
 ?>
+
 
 <?php
 include_once 'functies/functies.php';

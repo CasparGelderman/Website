@@ -6,7 +6,13 @@ DatabaseConnectie();
 
 
 
-
+function inloggenValidation ($data) { 
+    $data = trim($data);
+    $data = htmlspecialchars($data);
+    $data = stripslashes($data);
+    return $data;
+    }
+  
 function readMoviesFromDatabase() {
   global $pdo;
   try {
@@ -41,8 +47,6 @@ global $pdo;
  
   }
 
-
-
 function DatabaseConnectie () { 
   global $pdo;
   $hostname = "localhost"; //Naam van de Server
@@ -59,4 +63,8 @@ function DatabaseConnectie () {
   echo $e->GetMessage();
       }
     }
+
+
+
+
   

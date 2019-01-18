@@ -8,7 +8,8 @@ include 'includes\head.html';
 <?php
 include 'includes\header.html';
 ?>
-<?php 
+<?php
+
 ?>
 
     <section>

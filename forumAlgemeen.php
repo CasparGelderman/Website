@@ -7,8 +7,8 @@ include 'includes\head.html';
 <?php
 include 'includes\header.html';
 ?>
-<?php
-include 'includes\mainnavigatie.html';
+<?php 
+require_once 'includes\mainnavigatie.php';
 ?>
 
     <section>

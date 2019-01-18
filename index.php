@@ -8,7 +8,7 @@ include 'includes\head.html';
 include 'includes\header.html';
     ?>
 <?php 
-include 'includes\mainnavigatie.html';
+require_once 'includes\mainnavigatie.php';
 ?>
 
     <main>

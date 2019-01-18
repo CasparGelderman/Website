@@ -43,14 +43,29 @@
       </li>
       <li>
         <a href="bezoeker-login.php">Bezoeker</a>
-        <ul class="submenu">
-          <li>
-            <a href="bezoeker-login.php">Log in</a>
-          </li>
-          <li>
-            <a href="bezoeker-register.php">Registreren</a>
-          </li>
-        </ul>
+        
+       
+<?php 
+if (empty($_SESSION['accountnaam'])) {
+  $html = '
+  <ul class="submenu">
+  <li>
+  <a href="bezoeker-login.php">Log in</a>
+</li>
+<li>
+  <a href="bezoeker-register.php">Registreren</a>
+</li>
+</ul>' ;
+} else { 
+ $html = '
+ <ul class="submenu">
+  <li>
+  <a href="bezoeker-logout.php">Log uit</a>
+</li>
+</ul>' ;
+}
+echo $html;
+?> 
       </li>
     </ul>
   </nav>

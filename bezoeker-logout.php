@@ -1,5 +1,5 @@
 <?php 
-session_start();
+session_destroy();
 include 'includes\head.html';
 ?>
 
@@ -10,19 +10,15 @@ include 'includes\header.html';
 <?php 
 require_once 'includes\mainnavigatie.php';
 ?>
-  <!-- inlog scherm -->
-  <main id="inloggen">
-    <h2>Welcome, <?php
-    
-    echo $_POST['accountnaam'] ?> </h2>
-   
+  <!-- over ons -->
+  <main id="overons">
+  <h2> U bent uitgelogd.  </h2>
   </main>
+
 
   <?php 
 include 'includes\footer.html'
 ?>
-
-
 
 </body>
 

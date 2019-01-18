@@ -46,8 +46,9 @@ foreach ($dataposts as $forumpost) {
     </div>
     <p>' . $forumpost['tekst'] . '</p>
   </div>
-             '; } 
-    echo $html;
+             '; 
+             echo $html;
+            } 
 
  ?>
 

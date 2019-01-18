@@ -46,8 +46,9 @@ foreach ($dataposts as $forumpost) {
       <h3> Gepost op ' . $forumpost['unixtijd']. '</h3>
     </div>
     <p>' . $forumpost['tekst'] . '</p>
-  </div>'; }
-    echo $html;
+  </div>'; 
+echo $html;}
+    
 
  ?>
 

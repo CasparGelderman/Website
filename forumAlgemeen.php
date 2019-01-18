@@ -39,8 +39,9 @@ require_once 'includes\mainnavigatie.php';
 <?php
 include_once 'functies/functies-forum.php';
 $dataposts = readPostsFromDatabaseAlgemeen();
+$html = '';
 foreach ($dataposts as $forumpost) {
-    $html = '   
+    $html = $html.'   
     <div class="forumpost">
         <div class="forumposthead">
         <h3>Gepost door ' . $forumpost['accountnaam'] . ' </h3>

@@ -39,6 +39,7 @@ include_once 'functies/functies-forum.php';
 
 $dataposts = readPostsFromDatabaseProcenten();
 foreach ($dataposts as $forumpost) {
+  $forumpost['unixtijd'] = gmdate("Y-m-d\TH:i:s\Z", $forumpost['unixtijd']);
     $html = '   
     <div class="forumpost">
     <div class="forumposthead">
@@ -47,8 +48,10 @@ foreach ($dataposts as $forumpost) {
     </div>
     <p>' . $forumpost['tekst'] . '</p>
   </div>
-             '; } 
-    echo $html;
+             ';
+             echo $html;
+            } 
+    
 
  ?>
 

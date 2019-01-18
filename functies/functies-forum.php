@@ -2,22 +2,12 @@
 <?php
 session_start();
 require_once 'functies.php';
-$categorie = $accoutnaam = $tekst = "";
+
 
 
 function postPlaatsen($tekst, $unixtijd, $accountnaam, $categorie) {
 global $pdo;
-if (empty($categorie)) {
-    $_SESSION['error'] = 'Categorie moet geselecteerd zijn.  ';
-    header("Location: ../forumAlgemeen.php");
-} else {
-if (empty($tekst)) {
-    $_SESSION['error'] = 'Tekstbox mag niet leeg zijn. ';
-    header("Location: ../forumAlgemeen.php");
 
-}else { 
-      if (!empty($_SESSION['accountnaam'])) {
-        $accountnaam = $_SESSION['accountnaam'];
 
         try {
         $SQL = "INSERT INTO Posts (tekst, accountnaam, categorie, unixtijd) VALUES (:tekst,  :accountnaam,  :categorie, :unixtijd)";
@@ -28,23 +18,41 @@ if (empty($tekst)) {
          header("location: ../forumAlgemeen.php"); 
 
        } catch (PDOException $e) {
-        echo $e->GetMessage(); 
-     
+        echo $e->GetMessage();   
+       } 
     }
-      
-     
-      }else { 
-        $_SESSION['error'] = 'Log eerst in om een post te kunnen plaatsen.';
-        header("Location: ../bezoeker-login.php");
-      }
-    }
- }
+
+$CheckOnErrors = false;
+$ErrMsg = "";
+
+if(empty($_POST['post'])) {
+    $CheckOnErrors = true;
+ 
+}   else {
+    $post = nl2br(htmlentities($_POST['post']));
 }
- $tekst = nl2br(htmlentities($_POST['post']));
+
+if (empty($_POST['categorie'])) { 
+$CheckOnErrors = true;
+
+} else { 
+    $categorie = $_POST['categorie'];
+}
+
+
+// if (empty($_SESSION['accountnaam'])) { 
+//     $CheckOnErrors = true;
+//     $_SESSION['error'] = 'U moet eerst inloggen.';
+// echo 'accountnaam niet gevonden';
+//     } else { 
+//         $accountnaam = $_SESSION['accountnaam'];
+//     }
+    $NAAM = $_SESSION['accountnaam'];
  $unixtijd = time();
- $accountnaam = $_SESSION['accountnaam'];
- $categorie = $_POST['categorie'];
-postPlaatsen($tekst, $unixtijd, $accountnaam, $categorie);
+
+ if(!$CheckOnErrors){
+    postPlaatsen($post, $unixtijd, $NAAM, $categorie);
+ }
 
 
 

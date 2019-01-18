@@ -13,10 +13,18 @@ require_once 'includes\mainnavigatie.php';
 
 
 
+<section class="ReactiePlaatsen">
+<h3> Plaats een comment... </h3>
+      <form method="post" action="functies/functies-forum.php">
+        <textarea name="post" id="post" value="post"> Tekst </textarea>
+        <input type="submit" name="Posten">
+      </form>
+ </section>
+
+
+
 <?php
 include_once 'functies/functies-forum.php';
-
-
 
 $dataposts = readPostsFromDatabaseProcenten();
 foreach ($dataposts as $forumpost) {
@@ -28,7 +36,7 @@ foreach ($dataposts as $forumpost) {
     </div>
     <p>' . $forumpost['tekst'] . '</p>
   </div>
-             ';
+             '; } 
     echo $html;
 }
  ?>

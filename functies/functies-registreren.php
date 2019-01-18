@@ -43,7 +43,7 @@ if (empty($registernaam)) {
                  header("Location: ../bezoeker-register.php");
                  } else {
                 
-                if (strlen($registerwachtwoord) >= 15) {
+                if (strlen($registerwachtwoord) >= 30) {
                 $_SESSION['error'] = 'Wachtwoord is te lang.';
                 header("Location: ../bezoeker-register.php");
                 } else {

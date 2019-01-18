@@ -26,12 +26,12 @@ header("Location: ../bezoeker-login.php");
             header("Location: ../bezoeker-login.php");
             } else  { 
 
-                    if (strlen($accountnaam) >= 20) {
+                    if (strlen($accountnaam) >= 12) {
                     $_SESSION['error'] = 'Accountnaam of wachtwoord klopt niet';
                     header("Location: ../bezoeker-login.php");
                     } else {
 
-                            if (strlen($wachtwoord) >= 20) {
+                            if (strlen($wachtwoord) >= 12) {
                             $_SESSION['error'] = 'Accountnaam of wachtwoord klopt niet';
                             header("Location: ../bezoeker-login.php");
                             } else {

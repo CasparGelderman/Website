@@ -55,7 +55,7 @@ if (empty($_SESSION['accountnaam'])) {
 <li>
   <a href="bezoeker-register.php">Registreren</a>
 </li>
-</ul>' ;
+</ul>';
 } else { 
  $html = '
  <ul class="submenu">

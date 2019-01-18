@@ -12,18 +12,18 @@ $result = $post_id->fetch();
 $newPost_id = $result[0];
 
 
-$accountnaam = $_SESSION['accountnaam'];
+
 $categorie = 'Algemeen';
 $unixtijd = time();
 
 
-if(isset($_POST['post'])  {
+if(isset($_POST['post']))  {
   $titel = $_GET['Titel'];
   $tekst = $_GET['message'];
 
 
       if (!empty($_SESSION['accountnaam'])) {
-
+        $accountnaam = $_SESSION['accountnaam'];
 
         try {
         $SQL = 'INSERT INTO Accounts(post_id, titel, tekst, accountnaam, categorie, unixtijd) VALUES (:post_id, :titel, :tekst, :accountnaam, :categorie, :unixtijd)';

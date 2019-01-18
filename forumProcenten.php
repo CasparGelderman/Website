@@ -21,11 +21,18 @@ require_once 'includes\mainnavigatie.php';
     } ?> </p>
       <form method="post" action="functies/functies-forum.php">
         <textarea name="post" id="post" value="post"> Tekst </textarea>
+<select name="categorie">
+<option value="Algemeen">Algemeen</option>
+<option value="Bewerkingen">Bewerkingen</option>
+<option value="Tafels">Tafels</option>
+<option value="Breuken">Breuken</option>
+<option value="Percentages">Percentages</option>
+
+  </select>
+
         <input type="submit" name="Posten">
       </form>
  </section>
-
-
 
 <?php
 include_once 'functies/functies-forum.php';

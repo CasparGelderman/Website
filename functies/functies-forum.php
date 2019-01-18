@@ -2,39 +2,35 @@
 <?php
 session_start();
 require_once 'functies.php';
+$categorie = $accoutnaam = $tekst = "";
 
-function postPlaatsen() {
+
+function postPlaatsen($tekst, $unixtijd, $accountnaam, $categorie) {
 global $pdo;
+if (empty($categorie)) {
+    $_SESSION['error'] = 'Categorie moet geselecteerd zijn.  ';
+    header("Location: ../forumAlgemeen.php");
+} else {
+if (empty($tekst)) {
+    $_SESSION['error'] = 'Tekstbox mag niet leeg zijn. ';
+    header("Location: ../forumAlgemeen.php");
 
-
-$oldpost_id = $pdo -> query('SELECT COUNT(post_id) FROM Posts');
-$result = $oldpost_id->fetch();
-$post_id = $result[0];
-
-
-$titel = 'algemeen';
-$categorie = 'algemeen';
-$unixtijd = time();
-
-
-if(isset($_POST['post']))  {
-
-  $tekst = $_POST['post'];
-
-
+}else { 
       if (!empty($_SESSION['accountnaam'])) {
         $accountnaam = $_SESSION['accountnaam'];
 
         try {
-        $SQL = 'INSERT INTO Accounts(post_id, titel, tekst, accountnaam, categorie, unixtijd) VALUES (:post_id, :titel, :tekst, :accountnaam, :categorie, :unixtijd)';
+        $SQL = "INSERT INTO Posts (tekst, accountnaam, categorie, unixtijd) VALUES (:tekst,  :accountnaam,  :categorie, :unixtijd)";
         $query = $pdo->prepare($SQL);
-        $query->execute(array($post_id, $titel, $tekst, $accountnaam, $categorie, $unixtijd));
+        $query->execute([':tekst'=>$tekst, ':accountnaam'=>$accountnaam, ':categorie'=>$categorie, ':unixtijd'=>$unixtijd]);
 
         $_SESSION['error'] = 'Post succesvol gemaakt!';
-
+         header("location: ../forumAlgemeen.php"); 
 
        } catch (PDOException $e) {
-        echo $e->GetMessage(); }
+        echo $e->GetMessage(); 
+     
+    }
       
      
       }else { 
@@ -42,9 +38,13 @@ if(isset($_POST['post']))  {
         header("Location: ../bezoeker-login.php");
       }
     }
+ }
 }
-
-postPlaatsen();
+ $tekst = nl2br(htmlentities($_POST['post']));
+ $unixtijd = time();
+ $accountnaam = $_SESSION['accountnaam'];
+ $categorie = $_POST['categorie'];
+postPlaatsen($tekst, $unixtijd, $accountnaam, $categorie);
 
 
 

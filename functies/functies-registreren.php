@@ -70,8 +70,8 @@ if (empty($registernaam)) {
                                 $SQL = 'INSERT INTO Accounts(accountnaam, naam, wachtwoord) VALUES (:accountnaam, :naam, :wachtwoord)';
                                 $query = $pdo->prepare($SQL);
                                 $query -> execute ( array($registeraccountnaam, $registernaam, $registerwachtwoord));
-                                
-                                
+                                $_SESSION['error'] = "Registreren gelukt! Log hier in.";     
+                                header("location: ../bezoeker-login.php");                       
                                 
                                 } catch  (PDOException $e) {
                                 echo $e->GetMessage();

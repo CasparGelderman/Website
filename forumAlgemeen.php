@@ -26,15 +26,15 @@ require_once 'includes\mainnavigatie.php';
 <?php
 $titel = $_GET['Titel'];
 $tekst = $_GET['message'];
-$accountnaam = BobboB;
-$categorie = $_GET[''];
-$unixtijd = $_GET[''];
+$accountnaam = $_SESSION['accountnaam'];
+$categorie = 'Algemeen';
+$unixtijd = time();
 
 
 try {
     $SQL = 'INSERT INTO Accounts(post_id, titel, tekst, accountnaam, categorie, unixtijd) VALUES (:post_id, :titel, :tekst, :accountnaam, :categorie, :unixtijd)';
     $query = $pdo->prepare($SQL);
-    $query -> execute ( array($registeraccountnaam, $registernaam, $registerwachtwoord));
+    $query -> execute ( array($newPost_id, $titel, $tekst, $accountnaam, $categorie, $unixtijd));
 
 } catch  (PDOException $e) {
     echo $e->GetMessage();

@@ -76,7 +76,7 @@ if (empty($registernaam)) {
                                 } catch  (PDOException $e) {
                                 echo $e->GetMessage();
                                 $_SESSION['error'] = "Accountnaam bestaat al.";
-                                header("location: ../bezoeker-register.php");
+                                // header("location: ../bezoeker-register.php");
                                 }
 
                             } else {

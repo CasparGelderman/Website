@@ -13,6 +13,7 @@ require_once 'includes\mainnavigatie.php';
 
     <!-- videos -->
 
+<!--
     <section>
         <h3> Zoek naar videos... </h3>
         <p> Niet gevonden wat je wilt? Zoek tussen onze video's! </p>
@@ -21,7 +22,8 @@ require_once 'includes\mainnavigatie.php';
         </div>
 
     </section>
-
+-->
+<main id="videoframe">
 <?php
 include_once 'functies/functies.php';
 
@@ -48,7 +50,7 @@ $datavideos = readMoviesFromDatabase();
     }
 
  ?>
-     
+</main>
 
     <?php 
 include 'includes\footer.html'

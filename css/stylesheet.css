@@ -180,7 +180,7 @@ section p {
  iframe {
     margin: 2em;
     display: flex;
-    width: 90%;
+    width: 50%;
     height: 90%; 
  }
 
@@ -272,6 +272,10 @@ section p {
 }
 
 /* videos pagina */
+
+#videoframe {
+    justify-content: center;
+}
 .section-videos {
     width: 30%;
     display: inline-flex;
@@ -285,6 +289,7 @@ section p {
 .section-videos iframe {
     margin: 5px;
     padding: 5px;
+    width: 50%;
 }
 .section-videos h3 { 
     font-size: 16px;

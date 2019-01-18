@@ -9,16 +9,22 @@ include 'includes\head.html';
 include 'includes\header.html';
 ?>
 <?php
-
+require_once 'includes\mainnavigatie.php';
 ?>
 
     <section>
 
-        <form action="/action_page.php">
+        <form action="">
             Titel:<br>
-            <input type="text" value="Titel" name="Titel"><br>
-            Schrijf hier iets!<br>
+            <input type="text" value="Titel" name="Titel"><br>Schrijf hier iets!<br>
             <textarea name="message" rows="10" cols="30">Ik heb moeite met..</textarea><br><br>
+            <select name="categorie">
+                <option value="Algemeen">Algemeen</option>
+                <option value="Bewerkingen">Bewerkingen</option>
+                <option value="Tafels">Tafels</option>
+                <option value="Breuken">Breuken</option>
+                <option value="Percentages">Percentages</option>
+            </select>
             <input type="submit" value="Post!" name="post">
         </form>
 
@@ -30,8 +36,8 @@ $post_id = $pdo -> query('SELECT COUNT(post_id) FROM Posts');
 $result = $post_id->fetch();
 $newPost_id = $result[0];
 
-
-$accountnaam = $_SESSION['accountnaam'];
+$accountnaam = 'Bob';
+//$accountnaam = $_SESSION['accountnaam'];
 $categorie = 'Algemeen';
 $unixtijd = time();
 
@@ -40,7 +46,7 @@ if(isset($_POST['post'])) {
     $tekst = $_GET['message'];
 
     try {
-        $SQL = 'INSERT INTO Accounts(post_id, titel, tekst, accountnaam, categorie, unixtijd) VALUES (:post_id, :titel, :tekst, :accountnaam, :categorie, :unixtijd)';
+        $SQL = 'INSERT INTO Accounts(post_id, titel, [tekst], accountnaam, categorie, unixtijd) VALUES (:post_id, :titel, :tekst, :accountnaam, :categorie, :unixtijd)';
         $query = $pdo->prepare($SQL);
         $query->execute(array($newPost_id, $titel, $tekst, $accountnaam, $categorie, $unixtijd));
 
@@ -61,7 +67,7 @@ foreach ($dataposts as $forumpost) {
         <h3>' . $forumpost['titel'] . '</h3>
         <p class="samenvatting-forumAlgemeen">' .  $forumpost['tekst'] . '</p>
 
-     </section> 
+     </section>
              ';
 
     echo $html;

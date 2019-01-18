@@ -30,9 +30,13 @@ if(isset($_POST['post']))  {
         $query = $pdo->prepare($SQL);
         $query->execute(array($newPost_id, $titel, $tekst, $accountnaam, $categorie, $unixtijd));
 
+        $_SESSION['error'] = 'Post succesvol gemaakt!';
+
+
        } catch (PDOException $e) {
         echo $e->GetMessage(); }
       
+     
       }else { 
         $_SESSION['error'] = 'Log eerst in om een post te kunnen plaatsen.';
         header("Location: ../bezoeker-login.php");

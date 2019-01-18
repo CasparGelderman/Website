@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once 'functies/functies.php';
 include 'includes\head.html';
 ?>
 
@@ -8,7 +9,6 @@ include 'includes\head.html';
 include 'includes\header.html';
 ?>
 <?php 
-require_once 'includes\mainnavigatie.php';
 ?>
 
     <section>
@@ -24,20 +24,28 @@ require_once 'includes\mainnavigatie.php';
     </section>
 
 <?php
-$titel = $_GET['Titel'];
-$tekst = $_GET['message'];
+global $pdo;
+$post_id = $pdo -> query('SELECT COUNT(post_id) FROM Posts');
+$result = $post_id->fetch();
+$newPost_id = $result[0];
+
+
 $accountnaam = $_SESSION['accountnaam'];
 $categorie = 'Algemeen';
 $unixtijd = time();
 
+if(isset($_POST['post'])) {
+    $titel = $_GET['Titel'];
+    $tekst = $_GET['message'];
 
-try {
-    $SQL = 'INSERT INTO Accounts(post_id, titel, tekst, accountnaam, categorie, unixtijd) VALUES (:post_id, :titel, :tekst, :accountnaam, :categorie, :unixtijd)';
-    $query = $pdo->prepare($SQL);
-    $query -> execute ( array($newPost_id, $titel, $tekst, $accountnaam, $categorie, $unixtijd));
+    try {
+        $SQL = 'INSERT INTO Accounts(post_id, titel, tekst, accountnaam, categorie, unixtijd) VALUES (:post_id, :titel, :tekst, :accountnaam, :categorie, :unixtijd)';
+        $query = $pdo->prepare($SQL);
+        $query->execute(array($newPost_id, $titel, $tekst, $accountnaam, $categorie, $unixtijd));
 
-} catch  (PDOException $e) {
-    echo $e->GetMessage();
+    } catch (PDOException $e) {
+        echo $e->GetMessage();
+    }
 }
 ?>
 
@@ -56,9 +64,6 @@ foreach ($dataposts as $forumpost) {
              ';
 
     echo $html;
-
-    $post_id = $dbo->query('SELECT COUNT(post_id) FROM Posts');
-    $newPost_id = $post_id+1;
 }
 
 ?>

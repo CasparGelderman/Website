@@ -23,31 +23,28 @@ include 'includes\mainnavigatie.html';
 
     </section>
 
-
 <?php
-include_once 'functies/functies.php';
-sqlsrv_connect ( LeerRekenenDatabase);
-
-if(isset($_POST['post'])) {
-    $sql = "INSERT INTO Posts
-VALUES (?, ?, ?, ?, ?, ?, ?)";
-    $query = $pdo->prepare($sql);
-
-    if ($pdo->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $pdo->error;
-    }
-
-};
+$titel = $_GET['Titel'];
+$tekst = $_GET['message'];
+$accountnaam = BobboB;
+$categorie = $_GET[''];
+$unixtijd = $_GET[''];
 
 
+try {
+    $SQL = 'INSERT INTO Accounts(post_id, titel, tekst, accountnaam, categorie, unixtijd) VALUES (:post_id, :titel, :tekst, :accountnaam, :categorie, :unixtijd)';
+    $query = $pdo->prepare($SQL);
+    $query -> execute ( array($registeraccountnaam, $registernaam, $registerwachtwoord));
+
+} catch  (PDOException $e) {
+    echo $e->GetMessage();
+}
 ?>
 
 
 <?php
 include_once 'functies/functies.php';
-
+global $pdo;
 $dataposts = readPostsFromDatabase();
 foreach ($dataposts as $forumpost) {
     $html = '   
@@ -59,6 +56,9 @@ foreach ($dataposts as $forumpost) {
              ';
 
     echo $html;
+
+    $post_id = $dbo->query('SELECT COUNT(post_id) FROM Posts');
+    $newPost_id = $post_id+1;
 }
 
 ?>
